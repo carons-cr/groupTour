@@ -14,12 +14,11 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="./css/index.css" charset="UTF-8">
 </head>
 <body>
   <nav>导航栏</nav>
-  <div>
-
-  </div>
+  <div class="content"></div>
   <footer>底部栏</footer>
 </body>
 </html>

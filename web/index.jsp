@@ -18,39 +18,19 @@
 </head>
 <body>
   <nav>
-    <ul>
-      <li>
-        <a class="index" href="index.jsp">首页</a>
-      </li>
-      <li>
-        <a class="systemGroup" href="index.jsp">系统拼团</a>
-      </li>
-      <li>
-        <a class="selfGroup" href="index.jsp">自主拼团</a>
-      </li>
-      <li>
-        <a class="strategyADiary" href="index.jsp">攻略&日记</a>
-      </li>
-      <li>
-        <a class="aboutUs" href="index.jsp">关于我们</a>
-      </li>
-      <li>
-        <a class="register" href="index.jsp">注册</a>
-        <a class="login" href="index.jsp">| 登录</a>
-      </li>
-    </ul>
+    <iframe src="./html/nav.html" name="nav" scrolling="no"></iframe>
   </nav>
   <div class="content">
     <ul>
-      <li><img src="./img/rotationPlay1.jpeg"/></li>
-      <li><img src="./img/rotationPlay2.jpeg"/></li>
-      <li><img src="./img/rotationPlay3.jpeg"/></li>
-      <li><img src="./img/rotationPlay4.jpeg"/></li>
-      <li><img src="./img/rotationPlay5.jpeg"/></li>
+      <li><img src="./img/rotationPlay1.jpg"/></li>
+      <li><img src="./img/rotationPlay2.jpg"/></li>
+      <li><img src="./img/rotationPlay3.jpg"/></li>
+      <li><img src="./img/rotationPlay4.jpg"/></li>
+      <li><img src="./img/rotationPlay5.jpg"/></li>
     </ul>
   </div>
   <footer>
-    <a>Copyright © 2019 groupTour.com All Rights Reserved | 京ICP备 12003892号-11</a>
+      <iframe src="./html/footer.html" name="footer" scrolling="no"></iframe>
   </footer>
 </body>
 </html>

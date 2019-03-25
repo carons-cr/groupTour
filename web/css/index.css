@@ -4,37 +4,22 @@ body{
 }
 nav
 {
-    width: 1270px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     height: 120px;
-    box-sizing: border-box;
-    background-color: #242F33;
 }
-nav ul
+nav iframe
 {
-    float: left;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    list-style: none;
-}
-nav li
-{
-    float: left;
-    margin: 0;
-    width: 16.6%;
-    height: 100%;
-    text-align: center;
-}
-nav a
-{
-    color: white;
-    line-height: 120px;
-    font-size: 18px;
-    text-decoration-line: none;
+    border: 0;
 }
 .content
 {
+    width: 100%;
     height: 520px;
     box-sizing: border-box;
     overflow: hidden;
@@ -85,10 +70,16 @@ nav a
 }
 footer
 {
-    width: 1270px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     height: 60px;
-    margin-top: 50px;
-    border: 1px solid #EEE;
-    box-sizing: border-box;
-    text-align: center;
+}
+footer iframe
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }

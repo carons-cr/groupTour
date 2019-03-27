@@ -21,7 +21,7 @@
   <nav>
     <ul>
       <li>
-        <a href="./index.jsp" target="_blank">首页</a>
+        <a class="on" href="./index.jsp" target="_blank">首页</a>
       </li>
       <li>
         <a href="./html/footer.html">系统拼团</a>
@@ -36,8 +36,8 @@
         <a href="./html/footer.html">关于我们</a>
       </li>
       <li>
-        <a href="./html/footer.html">注册</a>
-        <a href="./html/footer.html">| 登录</a>
+        <a href="#register" onclick="showRegister()">注册</a>
+        <a href="#login" onclick="showLogin()">| 登录</a>
       </li>
     </ul>
   </nav>
@@ -53,16 +53,51 @@
     </div>
     <div class="register" id = "register">
       <form>
-        <input type="text" name="username" placeholder="enter username..">
-        <input type="password" name="password" placeholder="enter password..">
-        <a href="#login">已有帐号?前往登录</a>
-        <button type="submit" name="login"></button>
+        <div class="form-header">
+          <h4>注册</h4>
+          <button onclick="hideRegister()">X</button>
+        </div>
+        <div class="form-group">
+          <input type="text" class="username" name="username" placeholder="输入用户名">
+        </div>
+        <div class="form-group">
+          <input type="password" class="password" name="password" placeholder="输入密码">
+        </div>
+        <div class="form-group">
+          <input type="password" class="passwordConfirm" name="passwordConfirm" placeholder="再次输入密码">
+        </div>
+        <div class="form-group">
+          <a href="#login" onclick="showLogin()">已有帐号?前往登录</a>
+        </div>
+        <div class="form-group">
+          <button type="submit" name="register">注册</button>
+        </div>
       </form>
     </div>
-    <div class="login" id = "login"></div>
+    <div class="login" id = "login">
+      <form>
+        <div class="form-header">
+          <h4>登录</h4>
+          <button onclick="hideLogin()">X</button>
+        </div>
+        <div class="form-group">
+          <input type="text" class="username" name="username" placeholder="输入用户名">
+        </div>
+        <div class="form-group">
+          <input type="password" class="password" name="password" placeholder="输入密码">
+        </div>
+        <div class="form-group">
+          <a href="#register" onclick="showRegister()">未注册?点击前往</a>
+        </div>
+        <div class="form-group">
+          <button type="submit" name="login">登录</button>
+        </div>
+      </form>
+    </div>
   </div>
   <footer>
       <iframe src="./html/footer.html" name="footer" scrolling="no"></iframe>
   </footer>
+  <script type="text/javascript" src="./js/index.js"></script>
 </body>
 </html>

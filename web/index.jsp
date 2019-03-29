@@ -21,7 +21,7 @@
   <nav>
     <ul>
       <li>
-        <a class="on" href="./index.jsp" target="_blank">首页</a>
+        <a class="on" href="./index.jsp">首页</a>
       </li>
       <li>
         <a href="./html/footer.html">系统拼团</a>

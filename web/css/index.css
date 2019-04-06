@@ -154,6 +154,7 @@ nav a:hover
 }
 .form-group input
 {
+    margin: 0;
     padding: 0;
     width: 80%;
     height: 80%;
@@ -196,6 +197,19 @@ nav a:hover
     width: 79%;
     top: 1px;
     background-color: #131e1f;
+}
+.form-group p
+{
+    margin: 0 10%;
+    padding: 0;
+    border: 0;
+    width: 80%;
+    height: 30%;
+    line-height: 50%;
+    font-size: 10px;
+    text-align: left;
+    color: red;
+    display: none;
 }
 .login
 {

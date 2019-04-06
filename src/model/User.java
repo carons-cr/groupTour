@@ -11,6 +11,15 @@ public class User {
     private String sex;
     private String address;
 
+    public User() {
+
+    }
+
+    public User(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
     public int getId() {
         return id;
     }

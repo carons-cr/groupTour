@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: caron
-  Date: 19-3-23
-  Time: 上午11:16
+  Date: 19-4-6
+  Time: 下午8:41
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,8 +13,8 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>首页</title>
-  <link rel="stylesheet" type="text/css" href="./css/index.css" charset="UTF-8">
+  <title>拼团旅游</title>
+  <link rel="stylesheet" type="text/css" href="./css/systemGroup.css" charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="./css/nav.css" charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="./css/registerALogin.css" charset="UTF-8">
 </head>
@@ -22,10 +22,10 @@
   <nav>
     <ul>
       <li>
-        <a class="on" href="./index.jsp">首页</a>
+        <a href="./index.jsp">首页</a>
       </li>
       <li>
-        <a href="./systemGroup.jsp">系统拼团</a>
+        <a class="on" href="./systemGroup.jsp">系统拼团</a>
       </li>
       <li>
         <a href="./html/footer.html">自主拼团</a>
@@ -43,15 +43,6 @@
     </ul>
   </nav>
   <div class="content">
-    <div class="rotationPlay">
-      <ul>
-        <li><img src="./img/rotationPlay1.jpg"/></li>
-        <li><img src="./img/rotationPlay2.jpg"/></li>
-        <li><img src="./img/rotationPlay3.jpg"/></li>
-        <li><img src="./img/rotationPlay4.jpg"/></li>
-        <li><img src="./img/rotationPlay5.jpg"/></li>
-      </ul>
-    </div>
     <div class="register" id = "register">
       <form name="register" onsubmit="return checkAll('register')" method="post" action="register">
         <div class="form-header">
@@ -78,7 +69,7 @@
         </div>
       </form>
     </div>
-    <div class="login" id = "login">
+     <div class="login" id = "login">
       <form name="login" onsubmit="return checkAll('login')" method="post" action="login">
         <div class="form-header">
           <h4>登录</h4>

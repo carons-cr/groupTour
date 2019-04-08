@@ -1,4 +1,4 @@
-<%@ page import="model.User" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: caron
   Date: 19-3-23
@@ -15,7 +15,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>首页</title>
   <link rel="stylesheet" type="text/css" href="./css/index.css" charset="UTF-8">
-
+  <link rel="stylesheet" type="text/css" href="./css/nav.css" charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./css/registerALogin.css" charset="UTF-8">
 </head>
 <body>
   <nav>
@@ -24,7 +25,7 @@
         <a class="on" href="./index.jsp">首页</a>
       </li>
       <li>
-        <a href="./html/footer.html">系统拼团</a>
+        <a href="./systemGroup.jsp">系统拼团</a>
       </li>
       <li>
         <a href="./html/footer.html">自主拼团</a>
@@ -103,7 +104,7 @@
   <footer>
       <iframe src="./html/footer.html" name="footer" scrolling="no"></iframe>
   </footer>
-  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/registerALogin.js"></script>
   <script type="text/javascript">
     if (sessionStorage.getItem("userName") == null || sessionStorage.getItem("userName") === "null") {
         sessionStorage.setItem("userName", "<%=session.getAttribute("userName")%>");
@@ -117,9 +118,6 @@
     var userName = sessionStorage.getItem("userName");
     var reRegisterUserName = sessionStorage.getItem("reRegisterUserName");
     var loginFailUserName = sessionStorage.getItem("loginFailUserName");
-    console.log(userName);
-    console.log(reRegisterUserName);
-    console.log(loginFailUserName);
     if (userName !== "null") {
         document.getElementById("registerOrUserName").innerHTML=userName;
         document.getElementById("registerOrUserName").onclick=function () {};

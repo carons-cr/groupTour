@@ -1,0 +1,50 @@
+nav
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    background-color: #242F33;
+}
+nav ul
+{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+nav li
+{
+    float: left;
+    margin: 0;
+    width: 16.6%;
+    height: 100%;
+    text-align: center;
+}
+nav a
+{
+    color: rgba(255, 255, 255, .6);
+    line-height: 120px;
+    font-size: 18px;
+    text-decoration-line: none;
+}
+nav a.on
+{
+    font-size: 20px;
+    color: white;
+}
+nav a:hover
+{
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
+
+
+

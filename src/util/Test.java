@@ -2,12 +2,31 @@ package util;
 
 import dao.IUserDAO;
 import dao.factory.DAOFactory;
+import model.SystemGroup;
 import model.User;
 
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
+        /*测试系统拼团数据库操作
+        List<SystemGroup> systemGroupList = new ArrayList<SystemGroup>();
+        SystemGroup systemGroup = null;
+        try {
+            systemGroupList = DAOFactory.getISystemGroupDAOInstance().findAll();
+            for (int i = 0; i < systemGroupList.size(); i++) {
+                systemGroup = systemGroupList.get(i);
+                System.out.println(systemGroup.getId() + "\t" + systemGroup.getName());
+            }
+            int id = systemGroupList.get(5).getId();
+            systemGroup = DAOFactory.getISystemGroupDAOInstance().findById(id);
+            System.out.println(systemGroup.getId() + "\t" + systemGroup.getName());
+        }catch (Exception e) {
+            e.printStackTrace();
+        }/*
+
         /*测试用户数据库操作
         User user = null;
         try {

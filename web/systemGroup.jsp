@@ -1,4 +1,6 @@
-<%--
+<%@ page import="model.SystemGroup" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: caron
   Date: 19-4-6
@@ -17,6 +19,16 @@
   <link rel="stylesheet" type="text/css" href="./css/systemGroup.css" charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="./css/nav.css" charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="./css/registerALogin.css" charset="UTF-8">
+  <script type="text/javascript">
+    <%
+      List<SystemGroup> systemGroupList = (ArrayList<SystemGroup>)session.getAttribute("systemGroupList");
+      if (systemGroupList == null) {
+    %>
+        window.location.href="systemGroup";
+    <%
+      }
+    %>
+  </script>
 </head>
 <body>
   <nav>
@@ -26,9 +38,6 @@
       </li>
       <li>
         <a class="on" href="./systemGroup.jsp">系统拼团</a>
-      </li>
-      <li>
-        <a href="./html/footer.html">自主拼团</a>
       </li>
       <li>
         <a href="./html/footer.html">攻略&日记</a>
@@ -43,6 +52,43 @@
     </ul>
   </nav>
   <div class="content">
+    <div class="groupList">
+      <%
+        if (systemGroupList != null)
+        {
+            for (int i = 0; i < systemGroupList.size(); i++) {
+                if (i == 0 || i % 3 == 0) {
+      %>
+      <div class="row">
+
+      <%
+                }
+                SystemGroup systemGroup = systemGroupList.get(i);
+      %>
+        <div class="column">
+          <a href="./groupDetail.jsp" target="_blank">
+            <img src=<%=systemGroup.getPicUrl()%>>
+            <div class="info">
+              <p class="name"><%=systemGroup.getName()%></p>
+              <p class="description"><%=systemGroup.getDescription()%></p>
+              <p class="numberAPrice">
+                <span class="number"><%=systemGroup.getNumber()%>人团</span>
+                <span class="price"><%=systemGroup.getPrice()%>元/人</span>
+              </p>
+            </div>
+          </a>
+        </div>
+
+      <%
+                if ((i + 1) % 3 == 0) {
+      %>
+      </div>
+      <%
+                }
+            }
+        }
+      %>
+    </div>
     <div class="register" id = "register">
       <form name="register" onsubmit="return checkAll('register')" method="post" action="register">
         <div class="form-header">
@@ -69,7 +115,7 @@
         </div>
       </form>
     </div>
-     <div class="login" id = "login">
+    <div class="login" id = "login">
       <form name="login" onsubmit="return checkAll('login')" method="post" action="login">
         <div class="form-header">
           <h4>登录</h4>
@@ -90,9 +136,6 @@
           <button type="submit" name="login" class="submit">登录</button>
         </div>
       </form>
-    </div>
-    <div class="groupList">
-
     </div>
   </div>
   <footer>
@@ -130,6 +173,7 @@
         document.getElementsByClassName("userNameWarn")[1].innerHTML="用户名或密码错误";
         document.getElementsByClassName("userNameWarn")[1].style.display="block";
     }
+
   </script>
 </body>
 </html>

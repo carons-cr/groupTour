@@ -28,9 +28,6 @@
         <a href="./systemGroup.jsp">系统拼团</a>
       </li>
       <li>
-        <a href="./html/footer.html">自主拼团</a>
-      </li>
-      <li>
         <a href="./html/footer.html">攻略&日记</a>
       </li>
       <li>

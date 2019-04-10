@@ -61,27 +61,22 @@
       </form>
     </div>
 </div>
-<script type="text/javascript" src="./js/registerALogin.js"></script>
 <script type="text/javascript">
-    var name = "<%=request.getParameter("name")%>";
-    document.getElementById(name).style.display="block";
-    if (sessionStorage.getItem("reRegisterUserName") == null || sessionStorage.getItem("reRegisterUserName") === "null") {
-        sessionStorage.setItem("reRegisterUserName", "<%=session.getAttribute("reRegisterUserName")%>");
-    }
-    if (sessionStorage.getItem("loginFailUserName") == null || sessionStorage.getItem("loginFailUserName") === "null") {
-        sessionStorage.setItem("loginFailUserName", "<%=session.getAttribute("loginFailUserName")%>");
-    }
-    var reRegisterUserName = sessionStorage.getItem("reRegisterUserName");
-    var loginFailUserName = sessionStorage.getItem("loginFailUserName");
-    if (reRegisterUserName !== "null") {
-        document.getElementsByClassName("userName")[0].value=reRegisterUserName;
-        document.getElementsByClassName("userNameWarn")[0].innerHTML="该用户名已被注册";
-        document.getElementsByClassName("userNameWarn")[0].style.display="block";
-    }else if (loginFailUserName !== "null") {
-        document.getElementsByClassName("userName")[1].value=loginFailUserName;
-        document.getElementsByClassName("userNameWarn")[1].innerHTML="用户名或密码错误";
-        document.getElementsByClassName("userNameWarn")[1].style.display="block";
-    }
-  </script>
+<%
+  String reRegisterUserName = (String) session.getAttribute("reRegisterUserName");
+  String loginFailUserName = (String) session.getAttribute("loginFailUserName");
+  if (reRegisterUserName != null) {
+%>
+    sessionStorage.setItem("reRegisterUserName", "<%=session.getAttribute("reRegisterUserName")%>");
+<%
+  }
+  if (loginFailUserName != null) {
+%>
+    sessionStorage.setItem("loginFailUserName", "<%=session.getAttribute("loginFailUserName")%>");
+<%
+  }
+%>
+</script>
+<script type="text/javascript" src="./js/registerALogin.js"></script>
 </body>
 </html>

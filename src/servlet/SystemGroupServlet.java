@@ -25,7 +25,7 @@ public class SystemGroupServlet extends HttpServlet {
             if (systemGroupList != null) {
                 session.setAttribute("systemGroupList", systemGroupList);
             }
-            request.getRequestDispatcher("/systemGroup.jsp").forward(request, response);
+            response.sendRedirect("/systemGroup.jsp");
         }catch (Exception e) {
             e.printStackTrace();
         }

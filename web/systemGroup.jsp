@@ -17,7 +17,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>拼团旅游</title>
   <link rel="stylesheet" type="text/css" href="./css/systemGroup.css" charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="./css/nav.css" charset="UTF-8">
   <script type="text/javascript">
     <%
       List<SystemGroup> systemGroupList = (ArrayList<SystemGroup>)session.getAttribute("systemGroupList");
@@ -31,39 +30,22 @@
 </head>
 <body>
   <nav>
-    <ul>
-      <li>
-        <a href="./index.jsp">首页</a>
-      </li>
-      <li>
-        <a class="on" href="./systemGroup.jsp">系统拼团</a>
-      </li>
-      <li>
-        <a href="./html/footer.html">攻略&日记</a>
-      </li>
-      <li>
-        <a href="./html/aboutUs.html">关于我们</a>
-      </li>
-      <li>
-        <a id="registerOrUserName" href="./registerALogin.jsp?name=register">注册</a>
-        <a id="loginOrExit" href="./registerALogin.jsp?name=login">| 登录</a>
-      </li>
-    </ul>
+    <iframe src="./nav.jsp" name="nav" scrolling="no"></iframe>
   </nav>
   <div class="content">
     <div class="groupList">
-      <%
-        if (systemGroupList != null)
-        {
-            for (int i = 0; i < systemGroupList.size(); i++) {
-                if (i == 0 || i % 3 == 0) {
-      %>
+    <%
+      if (systemGroupList != null)
+      {
+          for (int i = 0; i < systemGroupList.size(); i++) {
+              if (i == 0 || i % 3 == 0) {
+    %>
       <div class="row">
 
-      <%
-                }
-                SystemGroup systemGroup = systemGroupList.get(i);
-      %>
+    <%
+              }
+              SystemGroup systemGroup = systemGroupList.get(i);
+    %>
         <div class="column">
           <a href="./groupDetail.jsp" target="_blank">
             <img src=<%=systemGroup.getPicUrl()%>>
@@ -77,21 +59,19 @@
             </div>
           </a>
         </div>
-
-      <%
-                if ((i + 1) % 3 == 0) {
-      %>
+    <%
+              if ((i + 1) % 3 == 0) {
+    %>
       </div>
-      <%
-                }
-            }
-        }
-      %>
+    <%
+              }
+          }
+      }
+    %>
     </div>
   </div>
   <footer>
       <iframe src="./html/footer.html" name="footer" scrolling="no"></iframe>
   </footer>
-  <script type="text/javascript" src="./js/systemGroup.js" charset="UTF-8"></script>
 </body>
 </html>

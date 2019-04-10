@@ -1,3 +1,23 @@
+window.onload=function () {
+    var currentUrl = window.location.href;
+    var currentDivId = currentUrl.split("=")[currentUrl.split("=").length - 1];
+    document.getElementById(currentDivId).style.display="block";
+    if (currentDivId === "register") {
+        var reRegisterUserName = sessionStorage.getItem("reRegisterUserName");
+        if (reRegisterUserName !== null) {
+            document.getElementsByClassName("userName")[0].value = reRegisterUserName;
+            document.getElementsByClassName("userNameWarn")[0].innerHTML = "该用户名已被注册";
+            document.getElementsByClassName("userNameWarn")[0].style.display = "block";
+        }
+    }else if (currentDivId === "login") {
+        var loginFailUserName = sessionStorage.getItem("loginFailUserName");
+        if (loginFailUserName !== null) {
+            document.getElementsByClassName("userName")[1].value=loginFailUserName;
+            document.getElementsByClassName("userNameWarn")[1].innerHTML="用户名或密码错误";
+            document.getElementsByClassName("userNameWarn")[1].style.display="block";
+        }
+    }
+};
 function showRegisterHideLogin() {
     document.getElementById("login").style.display="none";
     document.getElementById("register").style.display="block";

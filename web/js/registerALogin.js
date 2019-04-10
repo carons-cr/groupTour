@@ -1,16 +1,10 @@
-function showRegister() {
+function showRegisterHideLogin() {
     document.getElementById("login").style.display="none";
     document.getElementById("register").style.display="block";
 }
-function showLogin() {
+function showLoginHideRegister() {
     document.getElementById("register").style.display="none";
     document.getElementById("login").style.display="block";
-}
-function hideRegister() {
-    document.getElementById("register").style.display="none";
-}
-function hideLogin() {
-    document.getElementById("login").style.display="none";
 }
 function trim(str) {
     return str.replace(/\s+/g, "");

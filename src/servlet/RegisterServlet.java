@@ -24,10 +24,12 @@ public class RegisterServlet extends HttpServlet {
             if (DAOFactory.getIUserDAOInstance().findByUserName(userName) == null) {
                 DAOFactory.getIUserDAOInstance().doCreate(user);
                 session.setAttribute("userName", userName);
+                response.sendRedirect("/index.jsp");
+
             }else {
                 session.setAttribute("reRegisterUserName", userName);
+                response.sendRedirect("/registerALogin.jsp?name=register");
             }
-            response.sendRedirect("/index.jsp");
         }catch (Exception e) {
             e.printStackTrace();
         }

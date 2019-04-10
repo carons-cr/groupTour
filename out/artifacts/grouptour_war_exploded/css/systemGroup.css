@@ -13,6 +13,7 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    box-sizing: border-box;
 }
 .row
 {
@@ -29,7 +30,7 @@ body{
     display: inline-block;
     width: 30%;
     height: 100%;
-    box-shadow: #9199a1 1px 1px;
+    box-shadow: 0 1px 6px #cccccc;
     border-radius: 10px;
 }
 .column a

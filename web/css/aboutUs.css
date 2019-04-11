@@ -18,9 +18,47 @@ iframe
     padding: 0;
     border: 0;
 }
+.content
+{
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    height: 450px;
+}
+.content h2
+{
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+    color: #595959;
+}
+.content .description
+{
+    width: 100%;
+    margin: 10px 0;
+}
+.description .font
+{
+    width: 58%;
+    float: left;
+    line-height: 1.6em;
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: #999999;
+}
+.description .image
+{
+    width: 38%;
+    float: right;
+}
+.description img
+{
+    width: 100%;
+    height: 100%;
+}
 footer
 {
-    margin: 0;
+    margin: 50px 0 0;
     padding: 0;
     width: 100%;
     height: 60px;

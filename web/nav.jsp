@@ -23,7 +23,7 @@
         <a id="systemGroup" href="./systemGroup.jsp" target="_parent">系统拼团</a>
       </li>
       <li>
-        <a id="strategyADiary" href="./html/footer.html" target="_parent">攻略&日记</a>
+        <a id="travelNote" href="./travelNote.jsp" target="_parent">精彩游记</a>
       </li>
       <li>
         <a id="aboutUs" href="./html/aboutUs.html" target="_parent">关于我们</a>
@@ -40,9 +40,13 @@
     if (userName != null) {
         document.getElementById("loginOrExit").onclick = function () {
         <%
-            session.invalidate();
+            session.removeAttribute("userName");
+            session.removeAttribute("reRegisterUserName");
+            session.removeAttribute("loginFailUserName");
         %>
-            sessionStorage.clear();
+            sessionStorage.removeItem("userName");
+            sessionStorage.removeItem("reRegisterUserName");
+            sessionStorage.removeItem("loginFailUserName");
         }
     }
   </script>

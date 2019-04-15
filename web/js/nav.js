@@ -1,8 +1,11 @@
 window.onload=function () {
     var currentUrl = parent.location.href;
     var currentAId = (currentUrl.split("/")[currentUrl.split("/").length-1]).split(".")[0];
-    document.getElementById(currentAId).style.fontSize="20px";
-    document.getElementById(currentAId).style.color="white";
+    var currentA = document.getElementById(currentAId);
+    if (currentA != null) {
+        currentA.style.fontSize = "20px";
+        currentA.style.color = "white";
+    }
     var userName = sessionStorage.getItem("userName");
     if (userName != null) {
         document.getElementById("registerOrUserName").innerHTML=userName;

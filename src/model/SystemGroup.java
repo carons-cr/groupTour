@@ -10,7 +10,7 @@ public class SystemGroup {
     private Date startTime;
     private Date endTime;
     private String description;
-    private String picUrl;
+    private String imgUrl;
 
     public int getId() {
         return id;
@@ -68,11 +68,12 @@ public class SystemGroup {
         this.description = description;
     }
 
-    public String getPicUrl() {
-        return picUrl;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    public void setPicUrl(String picUrl) {
-        this.picUrl = picUrl;
+    public void setImgUrl(String imgUrl)
+    {
+        this.imgUrl = imgUrl;
     }
 }

@@ -48,7 +48,7 @@
     %>
         <div class="column">
           <a href="./groupDetail.jsp" target="_blank">
-            <img src=<%=systemGroup.getPicUrl()%>>
+            <img src=<%=systemGroup.getImgUrl()%>>
             <div class="info">
               <p class="name"><%=systemGroup.getName()%></p>
               <p class="description"><%=systemGroup.getDescription()%></p>

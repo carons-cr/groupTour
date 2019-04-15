@@ -62,20 +62,26 @@
     </div>
 </div>
 <script type="text/javascript">
-<%
-  String reRegisterUserName = (String) session.getAttribute("reRegisterUserName");
-  String loginFailUserName = (String) session.getAttribute("loginFailUserName");
-  if (reRegisterUserName != null) {
-%>
-    sessionStorage.setItem("reRegisterUserName", "<%=session.getAttribute("reRegisterUserName")%>");
-<%
+  if (sessionStorage.getItem("reRegisterUserName") == null) {
+  <%
+    String reRegisterUserName = (String) session.getAttribute("reRegisterUserName");
+    if (reRegisterUserName != null) {
+  %>
+       sessionStorage.setItem("reRegisterUserName", "<%=session.getAttribute("reRegisterUserName")%>");
+  <%
+    }
+  %>
   }
-  if (loginFailUserName != null) {
-%>
-    sessionStorage.setItem("loginFailUserName", "<%=session.getAttribute("loginFailUserName")%>");
-<%
+  if (sessionStorage.getItem("loginFailUserName") == null) {
+  <%
+    String loginFailUserName = (String) session.getAttribute("loginFailUserName");
+    if (loginFailUserName != null) {
+  %>
+       sessionStorage.setItem("loginFailUserName", "<%=session.getAttribute("loginFailUserName")%>");
+  <%
+    }
+  %>
   }
-%>
 </script>
 <script type="text/javascript" src="./js/registerALogin.js"></script>
 </body>

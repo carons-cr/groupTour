@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120px;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.content
+{
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    height: 520px;
+    border: 1px red solid;
+}
+.content .createNote
+{
+    padding: 10px 0;
+    border: 1px blue solid;
+    text-align: right;
+}
+.createNote button
+{
+    width: 80px;
+    height: 40px;
+    background-color: #242F33;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    border-radius: 26px;
+    border: 0;
+}
+.createNote button:hover
+{
+    position: relative;
+    width: 79px;
+    top: 1px;
+    background-color: #131e1f;
+}
+footer
+{
+    margin: 50px 0 0;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+}

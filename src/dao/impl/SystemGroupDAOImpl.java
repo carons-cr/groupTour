@@ -56,7 +56,7 @@ public class SystemGroupDAOImpl implements ISystemGroupDAO{
         systemGroup.setStartTime(resultSet.getDate(5));
         systemGroup.setEndTime(resultSet.getDate(6));
         systemGroup.setDescription(resultSet.getString(7));
-        systemGroup.setPicUrl(resultSet.getString(8));
+        systemGroup.setImgUrl(resultSet.getString(8));
         return systemGroup;
     }
 }

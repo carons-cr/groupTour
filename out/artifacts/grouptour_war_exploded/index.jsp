@@ -16,14 +16,16 @@
   <title>首页</title>
   <link rel="stylesheet" type="text/css" href="./css/index.css" charset="UTF-8">
   <script type="text/javascript">
-  <%
-    String userName = (String) session.getAttribute("userName");
-    if (userName != null) {
-  %>
-      sessionStorage.setItem("userName", "<%=session.getAttribute("userName")%>");
-  <%
+    if (sessionStorage.getItem("userName") == null) {
+    <%
+      String userName = (String) session.getAttribute("userName");
+      if (userName != null) {
+    %>
+        sessionStorage.setItem("userName", "<%=session.getAttribute("userName")%>");
+    <%
+      }
+    %>
     }
-  %>
   </script>
 </head>
 <body>

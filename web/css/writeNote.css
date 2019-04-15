@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120px;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.content
+{
+    margin: 40px auto 0;
+    padding: 0;
+    width: 90%;
+    min-height: 1000px;
+    box-shadow: 1px 1px 6px gray;
+}
+.content .completeNote
+{
+    padding: 10px 0;
+    height: 50px;
+}
+.completeNote .title
+{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+    border: 0;
+    border-bottom: 1px gray solid;
+    outline: none;
+    color: black;
+    text-align: center;
+}
+.completeNote .titleWarn
+{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 10px;
+    font-size: 10px;
+    color: red;
+    display: none;
+}
+.completeNote button
+{
+    width: 80px;
+    height: 40px;
+    background-color: #242F33;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    border-radius: 26px;
+    border: 0;
+    float: right;
+}
+.completeNote button:hover
+{
+    position: relative;
+    width: 79px;
+    top: 1px;
+    background-color: #131e1f;
+}
+.content .note
+{
+    min-height: 950px;
+}
+.note .article
+{
+    float: left;
+    width: 59%;
+    border-right: 1px gray solid;
+}
+.article textarea
+{
+    width: 100%;
+    min-height: 920px;
+    color: rgb(51, 51, 51);
+    font-size: 15px;
+    line-height: 1.6em;
+    letter-spacing: 1px;
+    border: 0;
+    outline: none;
+}
+.note .images
+{
+    float: right;
+    width: 39%;
+    border-left: 1px gray solid;
+    min-height: 920px;
+    text-align: center;
+}
+.images .addImg
+{
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 20%;
+    margin-top: 10px;
+    background-color: #242F33;
+    color: white;
+    outline: none;
+    border-radius: 8px;
+    text-align: center;
+}
+.images .addImg:hover
+{
+    position: relative;
+    width: 59%;
+    top: 1px;
+    background-color: #131e1f;
+}
+.images input
+{
+    width: 60%;
+    height: 40px;
+    opacity: 0;
+    position: relative;
+    top: -40px;
+    outline: none;
+}
+.images .img
+{
+    width: 98%;
+    height: 250px;
+    margin-left: 1%;
+    margin-top: -12px;
+}
+.images .deleteImg
+{
+    padding: 0;
+    position: relative;
+    top: -250px;
+    right: 2px;
+    float: right;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background-color: black;
+    border: 0;
+    font-size: 20px;
+    color: gray;
+    opacity: 0.2;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+}
+.images .deleteImg:hover
+{
+    color: white;
+}
+footer
+{
+    margin: 50px 0 0;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+}

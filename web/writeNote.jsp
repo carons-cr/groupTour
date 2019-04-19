@@ -16,7 +16,7 @@
     <iframe src="./nav.jsp" name="nav" scrolling="no"></iframe>
   </nav>
   <div class="content">
-    <form name="writeNote" onsubmit="return checkTitle()">
+    <form name="writeNote" onsubmit="return checkTitle()" method="post" action="writeNote">
       <div class="completeNote">
         <input name="title" class="title" placeholder="输入游记标题" onfocus="hideTitleWarn()"/>
         <button type="submit">完成</button>
@@ -24,7 +24,7 @@
       </div>
       <div class="note">
         <span class="article">
-          <textarea name="article" placeholder="记录下旅行途中的美好经历..."></textarea>
+          <textarea name="article" placeholder="记录下旅行途中的美好经历..." oninput="autoTextAreaHeight()"></textarea>
         </span>
         <span id="images" class="images">
           <div class="addImg">添加图片</div>

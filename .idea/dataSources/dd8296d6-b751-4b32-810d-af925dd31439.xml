@@ -918,13 +918,13 @@
     <table id="231" parent="4" name="system_group">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="232" parent="4" name="travel_note_img">
+    <table id="232" parent="4" name="travel_note">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="233" parent="4" name="travel_note_view">
+    <table id="233" parent="4" name="travel_note_img">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="234" parent="4" name="travle_note">
+    <table id="234" parent="4" name="travel_note_view">
       <Engine>InnoDB</Engine>
     </table>
     <table id="235" parent="4" name="user">
@@ -993,79 +993,79 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="232" name="travel_note_id">
+    <column id="246" parent="232" name="user_id">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="232" name="img_url">
-      <Position>3</Position>
-      <DataType>varchar(30)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="248" parent="232" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="249" parent="233" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="250" parent="233" name="travel_note_id">
-      <Position>2</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="251" parent="233" name="user_id">
-      <Position>3</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="252" parent="233" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="253" parent="234" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="254" parent="234" name="user_id">
-      <Position>2</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="255" parent="234" name="title">
+    <column id="247" parent="232" name="title">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="234" name="cover_img_url">
+    <column id="248" parent="232" name="cover_img_url">
       <Position>4</Position>
-      <DataType>varchar(30)|0</DataType>
+      <DataType>longtext|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="234" name="article">
+    <column id="249" parent="232" name="article">
       <Position>5</Position>
       <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="234" name="time">
+    <column id="250" parent="232" name="time">
       <Position>6</Position>
       <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="251" parent="232" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="252" parent="233" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="253" parent="233" name="travel_note_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="233" name="img_url">
+      <Position>3</Position>
+      <DataType>longtext|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="255" parent="233" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="256" parent="234" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="257" parent="234" name="travel_note_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="258" parent="234" name="user_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

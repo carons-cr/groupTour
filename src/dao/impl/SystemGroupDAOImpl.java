@@ -20,7 +20,7 @@ public class SystemGroupDAOImpl implements ISystemGroupDAO{
     @Override
     public List<SystemGroup> findAll() throws Exception {
         List<SystemGroup> systemGroupList = new ArrayList<SystemGroup>();
-        String sql = "select * from system_group";
+        String sql = "select * from system_group order by id desc";
         ResultSet resultSet = null;
         SystemGroup systemGroup = null;
         this.preparedStatement = connection.prepareStatement(sql);

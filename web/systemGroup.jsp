@@ -35,8 +35,7 @@
   <div class="content">
     <div class="groupList">
     <%
-      if (systemGroupList != null)
-      {
+      if (systemGroupList != null) {
           for (int i = 0; i < systemGroupList.size(); i++) {
               if (i == 0 || i % 3 == 0) {
     %>
@@ -60,7 +59,7 @@
           </a>
         </div>
     <%
-              if ((i + 1) % 3 == 0) {
+              if ((i + 1) % 3 == 0 || i ==  systemGroupList.size() -1) {
     %>
       </div>
     <%

@@ -19,9 +19,9 @@ iframe
 }
 .content
 {
-    margin: 0 auto;
     padding: 0;
     width: 90%;
+    margin-left: 5%;
 }
 .groupList
 {
@@ -32,7 +32,7 @@ iframe
 }
 .row
 {
-    margin: 10px 0 0;
+    margin: 10px 0;
     padding: 0;
     width: 100%;
     height: 380px;
@@ -40,28 +40,26 @@ iframe
 }
 .column
 {
-    margin: 15px;
+    margin: 2% 1%;
     padding: 0;
     display: inline-block;
     width: 30%;
-    height: 100%;
+    height: 96%;
     box-shadow: 0 1px 6px #cccccc;
     border-radius: 10px;
 }
 .column a
 {
-    margin: 0;
-    padding: 0;
-    width: 80%;
-    height: 100%;
     text-decoration: none;
-
 }
 .column img
 {
-    width: 100%;
-    height: 70%;
+    width: 96%;
+    margin-left: 2%;
+    height: 68%;
+    margin-top: 2%;
     display: block;
+    border-radius: 1px;
 }
 .column .info
 {
@@ -74,28 +72,35 @@ iframe
 {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 .info .name
 {
     height: 20%;
     color: #131e1f;
     font-size: large;
-    margin-bottom: 5px;
 }
 .info .description
 {
     font-size: smaller;
     color: #9199a1;
     text-align: center;
-    margin-bottom: 5px;
+    padding-top: 3%;
+    height: 50%;
 }
-.info .number
+.info .numberAPrice
+{
+    width: 96%;
+    margin-left: 2%;
+    height: 20%;
+}
+.numberAPrice .number
 {
     float: left;
     color: #787d82;
     font-size: medium;
 }
-.info .price
+.numberAPrice .price
 {
     float: right;
     color: red;

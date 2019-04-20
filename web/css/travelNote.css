@@ -21,13 +21,10 @@ iframe {
     margin: 0 auto;
     padding: 0;
     width: 90%;
-    height: 520px;
-    border: 1px red solid;
 }
 .content .createNote
 {
     padding: 10px 0;
-    border: 1px blue solid;
     text-align: right;
 }
 .createNote button
@@ -47,6 +44,107 @@ iframe {
     width: 79px;
     top: 1px;
     background-color: #131e1f;
+}
+.content .noteList
+{
+    height: 1040px;
+    box-shadow: 0 1px 6px #cccccc;
+    border-radius: 10px;
+}
+.noteList .page
+{
+    height: 1000px;
+    display: none;
+}
+#page1
+{
+    display: block;
+}
+.page .note
+{
+    border-bottom: 1px #e0e0e0 solid;
+    width: 96%;
+    margin-left: 2%;
+    height: 16%;
+    padding: 2% 0;
+}
+.note .noteCover
+{
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+.noteCover .imageA
+{
+    text-decoration: none;
+}
+.noteCover .imageA .image
+{
+    width: 100%;
+    height: 100%;
+}
+.note .font
+{
+    display: inline-block;
+    width: 73%;
+    height: 100%;
+    float: right;
+}
+.font .title
+{
+    display: inline-block;
+    width: 100%;
+    height: 20%;
+    color: #78a5f1;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.font .description
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80%;
+    color: #9199a1;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 1.6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.noteList .pageNumberRow
+{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.pageNumberRow .pageNumberColumn
+{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 2px;
+    text-align: center;
+    text-decoration: none;
+    color: gray;
+}
+#page1Number
+{
+    color: black;
+}
+.pageNumberRow .pageNumberColumn:hover
+{
+    background-color: rgba(130, 130, 130, 0.1);
 }
 footer
 {

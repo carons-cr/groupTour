@@ -27,7 +27,6 @@ function autoTextAreaHeight() {
     if (textAreaScrollHeight > textAreaHeight) {
         textAreaNode.style.height = textAreaScrollHeight + "px";
         document.getElementsByClassName("article")[0].style.height = textAreaScrollHeight + "px";
-        autoNoteHeight();
     }
 
 }
@@ -64,24 +63,7 @@ function addImg(selectFileNode) {
             imgHeight += imagesNode.children[2].clientHeight;
             if (imgHeight > imagesNode.offsetHeight)
                 imagesNode.style.height = imgHeight + "px";
-            autoNoteHeight();
         };
-    }
-}
-
-function autoNoteHeight() {
-    var articleNode = document.getElementsByClassName("article")[0];
-    var imagesNode = document.getElementsByClassName("images")[0];
-    var noteNode = document.getElementsByClassName("note")[0];
-    var articleNodeHeight = articleNode.offsetHeight;
-    var imagesNodeHeight = imagesNode.offsetHeight;
-    var noteNodeHeight = noteNode.offsetHeight;
-    if (articleNodeHeight > noteNodeHeight - 200 && articleNodeHeight > imagesNodeHeight) {
-        noteNode.style.height = articleNodeHeight + "px";
-        imagesNode.style.height = articleNodeHeight + "px";
-    }else if (imagesNodeHeight > noteNodeHeight -200 && imagesNodeHeight > articleNodeHeight) {
-        noteNode.style.height = imagesNodeHeight + "px";
-        articleNode.style.height = imagesNodeHeight + "px";
     }
 }
 

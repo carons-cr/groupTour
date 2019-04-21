@@ -23,13 +23,13 @@
         <p class="titleWarn">标题不能为空!</p>
       </div>
       <div class="note">
-        <span class="article">
+        <div class="article">
           <textarea name="article" placeholder="记录下旅行途中的美好经历..." oninput="autoTextAreaHeight()"></textarea>
-        </span>
-        <span id="images" class="images">
+        </div>
+        <div id="images" class="images">
           <div class="addImg">添加图片</div>
           <input type="file" class="selectSrc" accept="image/*" onchange="addImg(this)"/>
-        </span>
+        </div>
       </div>
     </form>
   </div>

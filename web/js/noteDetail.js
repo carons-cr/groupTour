@@ -4,6 +4,5 @@ window.onload=function () {
     var textAreaHeight = textAreaNode.offsetHeight;
     if (textAreaScrollHeight > textAreaHeight) {
         textAreaNode.style.height = textAreaScrollHeight + "px";
-        textAreaNode.style.overflow = "hidden";
     }
 };

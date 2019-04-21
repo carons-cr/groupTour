@@ -21,7 +21,6 @@ iframe {
     margin: 40px auto 0;
     padding: 0;
     width: 90%;
-    min-height: 1000px;
     box-shadow: 1px 1px 6px gray;
 }
 .content .completeNote
@@ -37,7 +36,7 @@ iframe {
     height: 40px;
     font-size: 20px;
     border: 0;
-    border-bottom: 1px gray solid;
+    border-bottom: 1px #e0e0e0 solid;
     outline: none;
     color: black;
     text-align: center;
@@ -82,29 +81,31 @@ iframe {
     color: #999999;
     text-align: center;
     border: 0;
+    padding-top: 8px;
 }
 .content .time
 {
     font-size: 16px;
     font-style: oblique;
     color: #999999;
+    padding-top: 8px;
 }
 .content .note
 {
-    height: 950px;
     padding-bottom: 30px;
 }
 .note .article
 {
-    float: left;
-    width: 59%;
-    border-right: 1px gray solid;
-    height: 920px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    width: 58%;
+    margin-left: 1%;
+    border-right: 1px #e0e0e0 solid;
 }
 .article textarea
 {
     width: 100%;
-    height: 920px;
     padding: 0 5px;
     color: rgb(51, 51, 51);
     font-size: 15px;
@@ -112,13 +113,15 @@ iframe {
     letter-spacing: 1px;
     border: 0;
     outline: none;
+    resize: none;
 }
 .note .images
 {
-    float: right;
-    width: 39%;
-    border-left: 1px gray solid;
-    height: 920px;
+    height: 100%;
+    display: inline-block;
+    width: 36%;
+    margin-left: 3%;
+    border-left: 1px #e0e0e0 solid;
     text-align: center;
 }
 .images .addImg

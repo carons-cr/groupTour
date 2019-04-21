@@ -1,13 +1,7 @@
 package dao.factory;
 
-import dao.ISystemGroupDAO;
-import dao.ITravelNoteDAO;
-import dao.ITravelNoteImgDAO;
-import dao.IUserDAO;
-import dao.proxy.SystemGroupDAOProxy;
-import dao.proxy.TravelNoteDAOProxy;
-import dao.proxy.TravelNoteImgDAOProxy;
-import dao.proxy.UserDAOProxy;
+import dao.*;
+import dao.proxy.*;
 
 public class DAOFactory {
     public static IUserDAO getIUserDAOInstance() throws Exception {
@@ -24,5 +18,9 @@ public class DAOFactory {
 
     public static ITravelNoteImgDAO getITravelNoteImgDAOInstance() throws Exception {
         return new TravelNoteImgDAOProxy();
+    }
+
+    public static ITravelNoteViewDAO getTravelNoteViewDAOInstance() throws Exception {
+        return new TravelNoteViewDAOProxy();
     }
 }

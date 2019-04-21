@@ -44,7 +44,7 @@
     %>
             <div class="note">
                 <div class="noteCover">
-                    <a class="imageA" href="./noteDetail.jsp?id=<%=travelNote.getId()%>">
+                    <a class="imageA" href="noteDetail?id=<%=travelNote.getId()%>" onclick="addUserNameToHref(this)">
     <%
                 if (travelNote.getCoverImgUrl() != null) {
     %>
@@ -59,7 +59,7 @@
                     </a>
                 </div>
                 <div class="font">
-                    <a class="title" href="./noteDetail.jsp?id=<%=travelNote.getId()%>"><%=travelNote.getTitle()%></a>
+                    <a class="title" href="noteDetail?id=<%=travelNote.getId()%>" onclick="addUserNameToHref(this)"><%=travelNote.getTitle()%></a>
                     <p class="description"><%=travelNote.getArticle()%></p>
                 </div>
             </div>

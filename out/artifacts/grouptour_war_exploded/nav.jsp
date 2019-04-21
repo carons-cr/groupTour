@@ -20,10 +20,10 @@
         <a id="index" href="./index.jsp" target="_parent">首页</a>
       </li>
       <li>
-        <a id="systemGroup" href="./systemGroup.jsp" target="_parent">系统拼团</a>
+        <a id="systemGroup" href="systemGroup" target="_parent">系统拼团</a>
       </li>
       <li>
-        <a id="travelNote" href="./travelNote.jsp" target="_parent">精彩游记</a>
+        <a id="travelNote" href="travelNote" target="_parent">精彩游记</a>
       </li>
       <li>
         <a id="aboutUs" href="./html/aboutUs.html" target="_parent">关于我们</a>

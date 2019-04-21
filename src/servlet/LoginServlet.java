@@ -22,6 +22,7 @@ public class LoginServlet extends HttpServlet {
         try {
             if (DAOFactory.getIUserDAOInstance().findByUserName(userName) == null) {
                 session.setAttribute("loginFailUserName", userName);
+                response.sendRedirect("/registerALogin.jsp?name=login");
             }else {
                 User user = DAOFactory.getIUserDAOInstance().findByUserName(userName);
                 if (!password.equals(user.getPassword())) {

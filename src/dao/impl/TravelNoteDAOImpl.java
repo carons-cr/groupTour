@@ -37,7 +37,7 @@ public class TravelNoteDAOImpl implements ITravelNoteDAO {
     @Override
     public List<TravelNote> findAll() throws Exception {
         List<TravelNote> travelNoteList = new ArrayList<TravelNote>();
-        String sql = "select * from travel_note";
+        String sql = "select * from travel_note order by id desc";
         ResultSet resultSet = null;
         TravelNote travelNote = null;
         this.preparedStatement = this.connection.prepareStatement(sql);

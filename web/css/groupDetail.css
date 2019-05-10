@@ -100,20 +100,143 @@ iframe {
 .content .signUp
 {
     margin: 40px auto 0;
-    padding: 0;
+    padding: 20px 0;
     width: 80%;
-    height: 200px;
     box-shadow: 1px 1px 6px gray;
-    display: none;
+    display: block;
+}
+.signUp form
+{
+    margin-bottom: 0;
+}
+.signUp .column
+{
+    display: inline-block;
+    width: 32%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+}
+.column .info-label
+{
+    color: #333333;
+}
+.column .userInfo
+{
+    height: 50%;
+    color: black;
+    font-size: 16px;
+    outline: none;
+    border: 0;
+    box-shadow: 1px 1px 5px #9199a1;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.column .submit
+{
+    position: relative;
+    top: 30%;
+    width: 60%;
+    height: 70%;
+    border-radius: 20px;
+    background-color: #242F33;
+    font-size: 16px;
+    border: 0;
+    color: white;
+    outline: none;
+}
+.signUp .submit:hover
+{
+    position: relative;
+    width: 59%;
+    top: 31%;
+    background-color: #131e1f;
 }
 .content .comment
 {
     margin: 40px auto 0;
     padding: 0;
     width: 80%;
-    height: 200px;
     box-shadow: 1px 1px 6px gray;
-    display: none;
+    display: block;
+}
+.comment .subTitle
+{
+    margin: 0 0 0 2%;
+    padding-top: 8px;
+    padding-bottom: 24px;
+    width: 96%;
+    height: 30px;
+    font-size: 18px;
+    color: #242F33;
+}
+.comment .show
+{
+    border-top: 1px #e0e0e0 solid;
+    width: 96%;
+    margin-left: 2%;
+    padding: 14px 12px 14px 0;
+    font-size: 16px;
+    color: #494949;
+}
+.show .head
+{
+    margin: 0;
+    padding-bottom:8px;
+    height: 20px;
+    text-align: left;
+    font-style: italic;
+}
+.head span
+{
+    margin-right: 10px;
+}
+.show .body
+{
+    height: 100px;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+.comment .write
+{
+    width: 96%;
+    margin-left: 2%;
+    padding: 14px 12px 14px 0;
+    height: 150px;
+}
+.write .text
+{
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100px;
+    padding: 2px;
+    border: 2px #e0e0e0 solid;
+    color: #494949;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+}
+.write .submit
+{
+    width: 100px;
+    height: 30px;
+    float: right;
+    border-radius: 20px;
+    background-color: #242F33;
+    font-size: 16px;
+    border: 0;
+    color: white;
+    outline: none;
+    text-align: center;
+}
+.write .submit:hover
+{
+    position: relative;
+    width: 98px;
+    background-color: #131e1f;
 }
 footer
 {

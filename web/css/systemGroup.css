@@ -61,6 +61,14 @@ iframe
     display: block;
     border-radius: 1px;
 }
+.column .startTime
+{
+    position: absolute;
+    margin-top: -2%;
+    margin-left: -12%;
+    font-size: medium;
+    color: white;
+}
 .column .info
 {
     margin: 0;

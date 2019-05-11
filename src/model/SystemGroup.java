@@ -11,6 +11,9 @@ public class SystemGroup {
     private Date endTime;
     private String description;
     private String imgUrl;
+    private String characteristic;
+    private String detailImgUrl;
+    private String detailRouteUrl;
 
     public int getId() {
         return id;
@@ -75,5 +78,29 @@ public class SystemGroup {
     public void setImgUrl(String imgUrl)
     {
         this.imgUrl = imgUrl;
+    }
+
+    public String getCharacteristic() {
+        return characteristic;
+    }
+
+    public void setCharacteristic(String characteristic) {
+        this.characteristic = characteristic;
+    }
+
+    public String getDetailImgUrl() {
+        return detailImgUrl;
+    }
+
+    public void setDetailImgUrl(String detailImgUrl) {
+        this.detailImgUrl = detailImgUrl;
+    }
+
+    public String getDetailRouteUrl() {
+        return detailRouteUrl;
+    }
+
+    public void setDetailRouteUrl(String detailRouteUrl) {
+        this.detailRouteUrl = detailRouteUrl;
     }
 }

@@ -46,8 +46,9 @@
               SystemGroup systemGroup = systemGroupList.get(i);
     %>
         <div class="column">
-          <a href="./groupDetail.jsp">
+          <a href="groupDetail?id=<%=systemGroup.getId()%>">
             <img src=<%=systemGroup.getImgUrl()%>>
+            <span class="startTime"><%=systemGroup.getStartTime()%></span>
             <div class="info">
               <p class="name"><%=systemGroup.getName()%></p>
               <p class="description"><%=systemGroup.getDescription()%></p>

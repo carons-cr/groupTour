@@ -27,7 +27,6 @@ iframe {
     padding: 0;
     width: 80%;
     box-shadow: 1px 1px 6px gray;
-    height: 2000px;
 }
 .groupInfo .groupName
 {
@@ -78,24 +77,25 @@ iframe {
     margin: 0;
     padding-top: 14px;
     padding-bottom: 16px;
-    text-align: center;
 }
 .detail .detailImg
 {
-    width: 90%;
-    height: 800px;
+    width: 85%;
+    margin-left: 5%;
+    height: 700px;
 }
 .groupInfo .route
 {
     margin: 0;
     padding-top: 14px;
     padding-bottom: 16px;
-    text-align: center;
 }
 .route .routeImg
 {
-    width: 90%;
-    height: 800px;
+    width: 85%;
+    margin-left: 5%;
+    height: 700px;
+    margin-bottom: 18px;
 }
 .content .signUp
 {
@@ -131,7 +131,6 @@ iframe {
     border: 0;
     box-shadow: 1px 1px 5px #9199a1;
     text-align: center;
-    letter-spacing: 1px;
 }
 .column .submit
 {
@@ -177,7 +176,6 @@ iframe {
     width: 96%;
     margin-left: 2%;
     padding: 14px 12px 14px 0;
-    font-size: 16px;
     color: #494949;
 }
 .show .head
@@ -187,6 +185,7 @@ iframe {
     height: 20px;
     text-align: left;
     font-style: italic;
+    font-size: 16px;
 }
 .head span
 {
@@ -198,6 +197,7 @@ iframe {
     margin: 0;
     text-align: left;
     overflow: hidden;
+    font-size: 15px;
 }
 
 .comment .write
@@ -207,6 +207,14 @@ iframe {
     padding: 14px 12px 14px 0;
     height: 150px;
 }
+.write .authorizedUsers
+{
+    position: absolute;
+    z-index: 1;
+    border: 0;
+    margin-top: -25px;
+    opacity: 0;
+}
 .write .text
 {
     margin-bottom: 15px;
@@ -215,9 +223,21 @@ iframe {
     padding: 2px;
     border: 2px #e0e0e0 solid;
     color: #494949;
-    font-size: 16px;
+    font-size: 15px;
     outline: none;
     resize: none;
+    overflow: hidden;
+}
+.write .author
+{
+    border: 0;
+    border-bottom: 1px #e0e0e0 solid;
+    width: 80px;
+    height: 30px;
+    color: #494949;
+    float: right;
+    text-align: center;
+    font-size: 16px;
 }
 .write .submit
 {
@@ -226,7 +246,7 @@ iframe {
     float: right;
     border-radius: 20px;
     background-color: #242F33;
-    font-size: 16px;
+    font-size: 15px;
     border: 0;
     color: white;
     outline: none;

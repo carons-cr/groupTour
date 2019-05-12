@@ -21,9 +21,7 @@ public class TravelNoteServlet extends HttpServlet {
         try {
             List<TravelNote> travelNoteList = null;
             travelNoteList = DAOFactory.getITravelNoteDAOInstance().findAll();
-            if (travelNoteList != null) {
-                session.setAttribute("travelNoteList", travelNoteList);
-            }
+            session.setAttribute("travelNoteList", travelNoteList);
             response.sendRedirect("/travelNote.jsp");
         }catch (Exception e) {
             e.printStackTrace();

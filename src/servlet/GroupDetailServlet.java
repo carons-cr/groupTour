@@ -26,7 +26,7 @@ public class GroupDetailServlet extends HttpServlet {
         int systemGroupId = Integer.parseInt(systemGroupIdStr);
         SystemGroup systemGroup = null;
         List<GroupComment> groupCommentList = null;
-        List<User> userList = new ArrayList<User>();
+        List<User> userList = null;
         HttpSession session = request.getSession();
         String path = "/groupDetail.jsp";
         try{
@@ -39,21 +39,21 @@ public class GroupDetailServlet extends HttpServlet {
                     path += "?end=false";
                 }else {
                     groupCommentList = DAOFactory.getIGroupCommentDAOInstance().findBySystemGroupId(systemGroupId);
-                    if (groupCommentList != null)
-                        session.setAttribute("groupCommentList", groupCommentList);
+                    session.setAttribute("groupCommentList", groupCommentList);
                     path += "?end=true";
                 }
                 List<GroupOrder> groupOrderList = DAOFactory.getIGroupOrderDAOInstance().findBySystemGroupId(systemGroupId);
                 if (groupOrderList != null) {
+                    userList = new ArrayList<User>();
                     for (int i = 0; i < groupOrderList.size(); i++) {
                         GroupOrder groupOrder = groupOrderList.get(i);
                         int userId = groupOrder.getUserId();
                         User user = DAOFactory.getIUserDAOInstance().findById(userId);
                         if (user != null)
                             userList.add(user);
-                        session.setAttribute("userList",userList);
                     }
                 }
+                session.setAttribute("userList", userList);
             }
             response.sendRedirect(path);
         }catch (Exception e) {

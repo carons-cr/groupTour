@@ -84,13 +84,13 @@
           <div class="column">
   <%
             if (userList != null) {
-                if (userList.size() > 5) {
+                if (userList.size() >= systemGroup.getNumber()) {
   %>
-            <button type="submit" class="submit" disabled="disabled">人数已满</button>
+            <button type="submit" class="submit" disabled="disabled" style="opacity: 0.7" onclick="checkUser()">人数已满</button>
   <%
                 }else {
   %>
-            <button type="submit" class="submit">报名</button>
+            <button type="submit" class="submit" onclick="checkUser()">报名</button>
   <%
                 }
             }else {

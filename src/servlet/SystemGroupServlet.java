@@ -22,9 +22,7 @@ public class SystemGroupServlet extends HttpServlet {
         try {
             List<SystemGroup> systemGroupList = null;
             systemGroupList = DAOFactory.getISystemGroupDAOInstance().findAll();
-            if (systemGroupList != null) {
-                session.setAttribute("systemGroupList", systemGroupList);
-            }
+            session.setAttribute("systemGroupList", systemGroupList);
             response.sendRedirect("/systemGroup.jsp");
         }catch (Exception e) {
             e.printStackTrace();

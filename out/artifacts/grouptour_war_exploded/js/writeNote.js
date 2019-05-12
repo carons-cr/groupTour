@@ -50,6 +50,8 @@ function addImg(selectFileNode) {
             var deleteImgNode = document.createElement("button");
             deleteImgNode.className = "deleteImg";
             deleteImgNode.onclick = function () {
+                imgInputNode.name = "deleteImg";
+                imgHeight -= imagesNode.children[2].clientHeight;
                 imgNode.style.display="none";
                 deleteImgNode.style.display="none";
                 imgInputNode.style.display="none";

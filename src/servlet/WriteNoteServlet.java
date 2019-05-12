@@ -45,7 +45,7 @@ public class WriteNoteServlet extends HttpServlet {
                     DAOFactory.getITravelNoteImgDAOInstance().doCreate(travelNoteImg);
                 }
             }
-            response.sendRedirect("/travelNote.jsp");
+            response.sendRedirect("travelNote");
         }catch (Exception e) {
             e.printStackTrace();
         }

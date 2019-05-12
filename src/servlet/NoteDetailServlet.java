@@ -44,14 +44,10 @@ public class NoteDetailServlet extends HttpServlet {
             if (travelNote != null) {
                 session.setAttribute("travelNote", travelNote);
                 User author = DAOFactory.getIUserDAOInstance().findById(travelNote.getUserId());
-                if (author != null) {
-                    session.setAttribute("authorName", author.getUserName());
-                }
+                session.setAttribute("authorName", author.getUserName());
             }
             travelNoteImgList = DAOFactory.getITravelNoteImgDAOInstance().findAllByTravelNoteId(travelNoteId);
-            if (travelNoteImgList != null) {
-                session.setAttribute("travelNoteImgList", travelNoteImgList);
-            }
+            session.setAttribute("travelNoteImgList", travelNoteImgList);
             response.sendRedirect("/noteDetail.jsp");
         }catch (Exception e) {
             e.printStackTrace();

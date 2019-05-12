@@ -47,7 +47,7 @@ iframe {
 }
 .content .noteList
 {
-    height: 1040px;
+    height: 1100px;
     box-shadow: 0 1px 6px #cccccc;
     border-radius: 10px;
 }
@@ -125,6 +125,7 @@ iframe {
 {
     height: 40px;
     line-height: 40px;
+    margin-top: 60px;
     text-align: center;
 }
 .pageNumberRow .pageNumberColumn

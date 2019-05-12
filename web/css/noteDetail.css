@@ -19,9 +19,9 @@ iframe {
 .content
 {
     margin: 40px auto 0;
-    padding: 0;
     width: 90%;
     box-shadow: 1px 1px 6px gray;
+    padding-bottom: 30px;
 }
 .content .note
 {

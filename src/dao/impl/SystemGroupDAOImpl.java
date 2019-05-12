@@ -19,15 +19,20 @@ public class SystemGroupDAOImpl implements ISystemGroupDAO{
 
     @Override
     public List<SystemGroup> findAll() throws Exception {
-        List<SystemGroup> systemGroupList = new ArrayList<SystemGroup>();
+        List<SystemGroup> systemGroupList = null;
         String sql = "select * from system_group order by id desc";
         ResultSet resultSet = null;
         SystemGroup systemGroup = null;
         this.preparedStatement = connection.prepareStatement(sql);
         resultSet = this.preparedStatement.executeQuery();
-        while (resultSet.next()) {
+        if (resultSet.next()) {
+            systemGroupList = new ArrayList<SystemGroup>();
             systemGroup = getSystemGroupFromResultSet(resultSet);
             systemGroupList.add(systemGroup);
+            while (resultSet.next()) {
+                systemGroup = getSystemGroupFromResultSet(resultSet);
+                systemGroupList.add(systemGroup);
+            }
         }
         this.preparedStatement.close();
         return systemGroupList;
@@ -35,7 +40,7 @@ public class SystemGroupDAOImpl implements ISystemGroupDAO{
 
     @Override
     public SystemGroup findById(int id) throws Exception {
-        SystemGroup systemGroup = new SystemGroup();
+        SystemGroup systemGroup = null;
         String sql = "select * from system_group where id = ?";
         ResultSet resultSet = null;
         this.preparedStatement = connection.prepareStatement(sql);

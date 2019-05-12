@@ -31,16 +31,21 @@ public class TravelNoteImgDAOImpl implements ITravelNoteImgDAO {
 
     @Override
     public List<TravelNoteImg> findAllByTravelNoteId(int travelNoteId) throws Exception {
-        List<TravelNoteImg> travelNoteImgList = new ArrayList<TravelNoteImg>();
+        List<TravelNoteImg> travelNoteImgList = null;
         String sql = "select * from travel_note_img where travel_note_id = ?";
         ResultSet resultSet = null;
         TravelNoteImg travelNoteImg = null;
         this.preparedStatement = this.connection.prepareStatement(sql);
         this.preparedStatement.setInt(1, travelNoteId);
         resultSet = this.preparedStatement.executeQuery();
-        while (resultSet.next()) {
+        if (resultSet.next()) {
+            travelNoteImgList = new ArrayList<TravelNoteImg>();
             travelNoteImg = getTravelNoteImgFromResultSet(resultSet);
             travelNoteImgList.add(travelNoteImg);
+            while (resultSet.next()) {
+                travelNoteImg = getTravelNoteImgFromResultSet(resultSet);
+                travelNoteImgList.add(travelNoteImg);
+            }
         }
         this.preparedStatement.close();
         return travelNoteImgList;

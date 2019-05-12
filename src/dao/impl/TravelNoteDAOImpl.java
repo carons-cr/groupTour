@@ -36,15 +36,20 @@ public class TravelNoteDAOImpl implements ITravelNoteDAO {
 
     @Override
     public List<TravelNote> findAll() throws Exception {
-        List<TravelNote> travelNoteList = new ArrayList<TravelNote>();
+        List<TravelNote> travelNoteList = null;
         String sql = "select * from travel_note order by id desc";
         ResultSet resultSet = null;
         TravelNote travelNote = null;
         this.preparedStatement = this.connection.prepareStatement(sql);
         resultSet = this.preparedStatement.executeQuery();
-        while (resultSet.next()) {
+        if (resultSet.next()) {
+            travelNoteList = new ArrayList<TravelNote>();
             travelNote = getTravelNoteFromResultSet(resultSet);
             travelNoteList.add(travelNote);
+            while (resultSet.next()) {
+                travelNote = getTravelNoteFromResultSet(resultSet);
+                travelNoteList.add(travelNote);
+            }
         }
         this.preparedStatement.close();
         return travelNoteList;
@@ -52,7 +57,7 @@ public class TravelNoteDAOImpl implements ITravelNoteDAO {
 
     @Override
     public TravelNote findById(int id) throws Exception {
-        TravelNote travelNote = new TravelNote();
+        TravelNote travelNote = null;
         String sql = "select * from travel_note where id = ?";
         ResultSet resultSet = null;
         this.preparedStatement = this.connection.prepareStatement(sql);

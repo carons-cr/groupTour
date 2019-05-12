@@ -2,30 +2,35 @@ window.onload=function () {
     var userName = sessionStorage.getItem("userName");
     var currentUrl = parent.location.href;
     var end = currentUrl.split("=")[1];
-    if (end !== "false") {
+    if (end === "false") {
         var userNameNode = document.getElementById("userName");
         if (userName != null) {
             userNameNode.value = userName;
         }else {
             userNameNode.readOnly = false;
         }
-    }else if (end === "false") {
+    }else if (end === "true") {
         var writeNode = document.getElementsByClassName("write")[0];
         if (userName != null) {
             var authorNode = document.getElementsByClassName("author")[0];
-            authorNode.value = userName;
+            if (authorNode != null)
+                authorNode.value = userName;
             var userNodes = document.getElementsByClassName("user");
             var authorizedUserNodes = document.getElementsByClassName("authorizedUser");
-            for (var i = 0; i < userNodes.length; i++) {
-                if (userName === userNodes[i].innerText) {
-                    writeNode.style.display = "none";
+            if (userNodes != null) {
+                for (var i = 0; i < userNodes.length; i++) {
+                    if (userName === userNodes[i].innerText) {
+                        writeNode.style.display = "none";
+                    }
                 }
             }
-            for (var j = 0; j < authorizedUserNodes.length; j++) {
-                if (userName === authorizedUserNodes[j].innerText)
-                    break;
-                else if (j === authorizedUserNodes.length - 1) {
-                    writeNode.style.display = "none";
+            if (authorizedUserNodes != null) {
+                for (var j = 0; j < authorizedUserNodes.length; j++) {
+                    if (userName === authorizedUserNodes[j].innerText)
+                        break;
+                    else if (j === authorizedUserNodes.length - 1) {
+                        writeNode.style.display = "none";
+                    }
                 }
             }
         }else {
@@ -59,4 +64,10 @@ function checkText() {
         return false;
     }
     return true;
+}
+
+function checkUser() {
+    var userName = sessionStorage.getItem("userName");
+    if (userName == null)
+        window.location.href = "./registerALogin.jsp?name=login";
 }

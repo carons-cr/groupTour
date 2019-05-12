@@ -1,7 +1,10 @@
 package servlet;
 
 import dao.factory.DAOFactory;
+import model.GroupComment;
+import model.GroupOrder;
 import model.SystemGroup;
+import model.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @WebServlet(name = "GroupDetailServlet", urlPatterns = "/groupDetail")
 public class GroupDetailServlet extends HttpServlet {
@@ -20,6 +25,8 @@ public class GroupDetailServlet extends HttpServlet {
         String systemGroupIdStr = request.getParameter("id");
         int systemGroupId = Integer.parseInt(systemGroupIdStr);
         SystemGroup systemGroup = null;
+        List<GroupComment> groupCommentList = null;
+        List<User> userList = new ArrayList<User>();
         HttpSession session = request.getSession();
         String path = "/groupDetail.jsp";
         try{
@@ -31,7 +38,21 @@ public class GroupDetailServlet extends HttpServlet {
                 if (startTime.compareTo(today) > 0) {
                     path += "?end=false";
                 }else {
+                    groupCommentList = DAOFactory.getIGroupCommentDAOInstance().findBySystemGroupId(systemGroupId);
+                    if (groupCommentList != null)
+                        session.setAttribute("groupCommentList", groupCommentList);
                     path += "?end=true";
+                }
+                List<GroupOrder> groupOrderList = DAOFactory.getIGroupOrderDAOInstance().findBySystemGroupId(systemGroupId);
+                if (groupOrderList != null) {
+                    for (int i = 0; i < groupOrderList.size(); i++) {
+                        GroupOrder groupOrder = groupOrderList.get(i);
+                        int userId = groupOrder.getUserId();
+                        User user = DAOFactory.getIUserDAOInstance().findById(userId);
+                        if (user != null)
+                            userList.add(user);
+                        session.setAttribute("userList",userList);
+                    }
                 }
             }
             response.sendRedirect(path);

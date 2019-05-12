@@ -1,4 +1,8 @@
-<%@ page import="model.SystemGroup" %><%--
+<%@ page import="model.SystemGroup" %>
+<%@ page import="java.util.List" %>
+<%@ page import="model.User" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="model.GroupComment" %><%--
   Created by IntelliJ IDEA.
   User: caron
   Date: 19-4-9
@@ -13,6 +17,7 @@
   <%
     SystemGroup systemGroup = (SystemGroup) session.getAttribute("systemGroup");
     String end = request.getParameter("end");
+    List<User> userList = (ArrayList<User>)session.getAttribute("userList");
   %>
 </head>
 <body>
@@ -37,13 +42,10 @@
       </div>
     </div>
   <%
-    }
-  %>
-  <%
-    if (!end.equals("false")) {
+        if (end.equals("false")) {
   %>
     <div class="signUp">
-      <form onsubmit="return checkAll()" method="post" action="login">
+      <form onsubmit="return checkAll()" method="post" action="signUp?id=<%=systemGroup.getId()%>">
         <div class="row">
           <div class="column">
             <label for="userName" class="info-label">用户名</label>
@@ -80,33 +82,83 @@
         </div>
         <div class="row">
           <div class="column">
+  <%
+            if (userList != null) {
+                if (userList.size() > 5) {
+  %>
+            <button type="submit" class="submit" disabled="disabled">人数已满</button>
+  <%
+                }else {
+  %>
             <button type="submit" class="submit">报名</button>
+  <%
+                }
+            }else {
+  %>
+            <button type="submit" class="submit" onclick="checkUser()">报名</button>
+  <%
+            }
+  %>
           </div>
         </div>
       </form>
     </div>
   <%
-    }else if(end.equals("false")) {
+        }else if(end.equals("true")) {
   %>
     <div class="comment">
-      <form onsubmit="return checkText()">
+      <form onsubmit="return checkText()" method="post" action="comment?id=<%=systemGroup.getId()%>">
         <p class="subTitle">[用户评价]</p>
+  <%
+            List<GroupComment> groupCommentList = (ArrayList<GroupComment>)session.getAttribute("groupCommentList");
+            if (groupCommentList != null) {
+                for (GroupComment groupComment : groupCommentList) {
+
+  %>
         <div class="show">
           <p class="head">
-            <span class="user">caron</span>
-            <span class="time">2019-03-23</span>
+  <%
+                    int userId = groupComment.getUserId();
+                    String userName = null;
+                    if (userList != null) {
+                        for (User user : userList) {
+                            if (userId == user.getId())
+                                userName = user.getUserName();
+                        }
+                    }
+  %>
+  <%
+                    if (userName != null) {
+  %>
+            <span class="user"><%=userName%></span>
+  <%
+                    }
+  %>
+            <span class="time"><%=groupComment.getTime()%></span>
           </p>
-          <p class="body">总体满意，这次主要想体验北部的冰天雪地的感觉，因为我们这里基本每年都能看到雪的，但
-            很不幸的是有史以来降雪最少，气温最高的暖冬被我赶上，中大奖了！不过旅行社安排的住宿和车辆还是不错的，
-            司机小于人很不错，热心，踏实，也很热情。对于冬天的这条线路自然风景是看点，娱乐项目很少，网页上宣传的
-            活动有不少因是淡季都没有了，在雪少的年份不推荐此线路。
-          </p>
+          <p class="body"><%=groupComment.getContent()%></p>
         </div>
+  <%
+                }
+            }else {
+  %>
+        <div class="show">
+          <p class="body">暂时还没有用户写下评价哦~</p>
+        </div>
+  <%
+            }
+  %>
         <div class="write">
           <p class="authorizedUsers">可评论用户:
-            <span class="authorizedUser">u1</span>
-            <span class="authorizedUser">u2</span>
-            <span class="authorizedUser">u3</span>
+  <%
+            if (userList != null) {
+                for (User user : userList) {
+  %>
+            <span class="authorizedUser"><%=user.getUserName()%></span>
+  <%
+                }
+            }
+  %>
           </p>
           <textarea class="text" name="comment" placeholder="输入200字以内评价.."></textarea>
           <button type="submit" class="submit">发布评价</button>
@@ -115,6 +167,7 @@
       </form>
     </div>
   <%
+        }
     }
   %>
   </div>

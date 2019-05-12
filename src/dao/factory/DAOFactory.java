@@ -20,7 +20,15 @@ public class DAOFactory {
         return new TravelNoteImgDAOProxy();
     }
 
-    public static ITravelNoteViewDAO getTravelNoteViewDAOInstance() throws Exception {
+    public static ITravelNoteViewDAO getITravelNoteViewDAOInstance() throws Exception {
         return new TravelNoteViewDAOProxy();
+    }
+
+    public static IGroupOrderDAO getIGroupOrderDAOInstance() throws Exception {
+        return new GroupOrderDAOProxy();
+    }
+
+    public static IGroupCommentDAO getIGroupCommentDAOInstance() throws Exception {
+        return new GroupCommentDAOProxy();
     }
 }

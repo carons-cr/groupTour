@@ -35,8 +35,8 @@ public class NoteDetailServlet extends HttpServlet {
                 }
             }
             travelNoteView.setTravelNoteId(travelNoteId);
-            DAOFactory.getTravelNoteViewDAOInstance().doCreate(travelNoteView);
-            int viewNum = DAOFactory.getTravelNoteViewDAOInstance().getViewNum(travelNoteId);
+            DAOFactory.getITravelNoteViewDAOInstance().doCreate(travelNoteView);
+            int viewNum = DAOFactory.getITravelNoteViewDAOInstance().getViewNum(travelNoteId);
             if (viewNum != 0) {
                 session.setAttribute("viewNum", viewNum);
             }

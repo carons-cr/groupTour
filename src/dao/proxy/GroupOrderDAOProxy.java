@@ -43,15 +43,15 @@ public class GroupOrderDAOProxy implements IGroupOrderDAO {
     }
 
     @Override
-    public GroupOrder findByUserId(int userId) throws Exception {
-        GroupOrder groupOrder = null;
+    public List<GroupOrder> findByUserId(int userId) throws Exception {
+        List<GroupOrder> groupOrderList = null;
         try {
-            groupOrder = this.groupOrderDAO.findByUserId(userId);
+            groupOrderList = this.groupOrderDAO.findByUserId(userId);
         }catch (Exception e) {
             throw e;
         }finally {
             this.dbUtil.closeConnection();
         }
-        return groupOrder;
+        return groupOrderList;
     }
 }

@@ -9,7 +9,7 @@ window.onload=function () {
     var userName = sessionStorage.getItem("userName");
     if (userName != null) {
         document.getElementById("registerOrUserName").innerHTML=userName;
-        document.getElementById("registerOrUserName").href=currentUrl;
+        document.getElementById("registerOrUserName").href="user?name="+userName;
         document.getElementById("loginOrExit").innerHTML="| 退出";
         document.getElementById("loginOrExit").href=currentUrl;
     }

@@ -6,6 +6,8 @@ import model.TravelNoteView;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TravelNoteViewDAOImpl implements ITravelNoteViewDAO {
     private Connection connection = null;
@@ -39,5 +41,35 @@ public class TravelNoteViewDAOImpl implements ITravelNoteViewDAO {
             id = resultSet.getInt(1);
         this.preparedStatement.close();
         return id;
+    }
+
+    @Override
+    public List<TravelNoteView> findByUserId(int userId) throws Exception {
+        List<TravelNoteView> travelNoteViewList = null;
+        String sql = "SELECT * FROM travel_note_view WHERE user_id = ?";
+        ResultSet resultSet = null;
+        TravelNoteView travelNoteView = null;
+        this.preparedStatement = this.connection.prepareStatement(sql);
+        this.preparedStatement.setInt(1, userId);
+        resultSet = this.preparedStatement.executeQuery();
+        if (resultSet.next()) {
+            travelNoteViewList = new ArrayList<TravelNoteView>();
+            travelNoteView = getTravelNoteViewFromResultSet(resultSet);
+            travelNoteViewList.add(travelNoteView);
+            while (resultSet.next()) {
+                travelNoteView = getTravelNoteViewFromResultSet(resultSet);
+                travelNoteViewList.add(travelNoteView);
+            }
+        }
+        this.preparedStatement.close();
+        return travelNoteViewList;
+    }
+
+    private TravelNoteView getTravelNoteViewFromResultSet(ResultSet resultSet) throws Exception {
+        TravelNoteView travelNoteView = new TravelNoteView();
+        travelNoteView.setId(resultSet.getInt(1));
+        travelNoteView.setTravelNoteId(resultSet.getInt(2));
+        travelNoteView.setUserId(resultSet.getInt(3));
+        return travelNoteView;
     }
 }

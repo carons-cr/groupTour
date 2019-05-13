@@ -21,8 +21,8 @@ public class TravelNoteDAOImpl implements ITravelNoteDAO {
     @Override
     public boolean doCreate(TravelNote travelNote) throws Exception {
         boolean isCreate = false;
-        String sql = "insert into travel_note (user_id, title, cover_img_url, article, time)" +
-                " values (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO travel_note (user_id, title, cover_img_url, article, time)" +
+                " VALUES (?, ?, ?, ?, ?)";
         this.preparedStatement = this.connection.prepareStatement(sql);
         this.preparedStatement.setInt(1, travelNote.getUserId());
         this.preparedStatement.setString(2, travelNote.getTitle());
@@ -37,20 +37,11 @@ public class TravelNoteDAOImpl implements ITravelNoteDAO {
     @Override
     public List<TravelNote> findAll() throws Exception {
         List<TravelNote> travelNoteList = null;
-        String sql = "select * from travel_note order by id desc";
+        String sql = "SELECT * FROM travel_note ORDER BY id DESC";
         ResultSet resultSet = null;
-        TravelNote travelNote = null;
         this.preparedStatement = this.connection.prepareStatement(sql);
         resultSet = this.preparedStatement.executeQuery();
-        if (resultSet.next()) {
-            travelNoteList = new ArrayList<TravelNote>();
-            travelNote = getTravelNoteFromResultSet(resultSet);
-            travelNoteList.add(travelNote);
-            while (resultSet.next()) {
-                travelNote = getTravelNoteFromResultSet(resultSet);
-                travelNoteList.add(travelNote);
-            }
-        }
+        travelNoteList = getTravelNoteListFromResultSet(resultSet);
         this.preparedStatement.close();
         return travelNoteList;
     }
@@ -58,7 +49,7 @@ public class TravelNoteDAOImpl implements ITravelNoteDAO {
     @Override
     public TravelNote findById(int id) throws Exception {
         TravelNote travelNote = null;
-        String sql = "select * from travel_note where id = ?";
+        String sql = "SELECT * FROM travel_note WHERE id = ?";
         ResultSet resultSet = null;
         this.preparedStatement = this.connection.prepareStatement(sql);
         this.preparedStatement.setInt(1, id);
@@ -72,7 +63,7 @@ public class TravelNoteDAOImpl implements ITravelNoteDAO {
     @Override
     public int GetLastestId() throws Exception {
         int id = 0;
-        String sql = "select max(id) from travel_note";
+        String sql = "SELECT max(id) FROM travel_note";
         ResultSet resultSet = null;
         this.preparedStatement = this.connection.prepareStatement(sql);
         resultSet = this.preparedStatement.executeQuery();
@@ -80,6 +71,19 @@ public class TravelNoteDAOImpl implements ITravelNoteDAO {
             id = resultSet.getInt(1);
         this.preparedStatement.close();
         return id;
+    }
+
+    @Override
+    public List<TravelNote> findByUserId(int userId) throws Exception {
+        List<TravelNote> travelNoteList = null;
+        String sql = "SELECT * FROM travel_note WHERE user_id = ?";
+        ResultSet resultSet = null;
+        this.preparedStatement = this.connection.prepareStatement(sql);
+        this.preparedStatement.setInt(1, userId);
+        resultSet = this.preparedStatement.executeQuery();
+        travelNoteList = getTravelNoteListFromResultSet(resultSet);
+        this.preparedStatement.close();
+        return travelNoteList;
     }
 
     private TravelNote getTravelNoteFromResultSet(ResultSet resultSet) throws Exception {
@@ -90,6 +94,21 @@ public class TravelNoteDAOImpl implements ITravelNoteDAO {
         travelNote.setCoverImgUrl(resultSet.getString(4));
         travelNote.setArticle(resultSet.getString(5));
         travelNote.setTime(resultSet.getDate(6));
-        return  travelNote;
+        return travelNote;
+    }
+
+    private List<TravelNote> getTravelNoteListFromResultSet(ResultSet resultSet) throws Exception {
+        List<TravelNote> travelNoteList = null;
+        TravelNote travelNote = null;
+        if (resultSet.next()) {
+            travelNoteList = new ArrayList<TravelNote>();
+            travelNote = getTravelNoteFromResultSet(resultSet);
+            travelNoteList.add(travelNote);
+            while (resultSet.next()) {
+                travelNote = getTravelNoteFromResultSet(resultSet);
+                travelNoteList.add(travelNote);
+            }
+        }
+        return travelNoteList;
     }
 }

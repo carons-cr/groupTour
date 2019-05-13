@@ -42,31 +42,22 @@ public class GroupOrderDAOImpl implements IGroupOrderDAO {
         this.preparedStatement = this.connection.prepareStatement(sql);
         this.preparedStatement.setInt(1, systemGroupId);
         resultSet = this.preparedStatement.executeQuery();
-        if (resultSet.next()) {
-            groupOrderList = new ArrayList<GroupOrder>();
-            groupOrder = getGroupOrderFromResultSet(resultSet);
-            groupOrderList.add(groupOrder);
-            while (resultSet.next()) {
-                groupOrder = getGroupOrderFromResultSet(resultSet);
-                groupOrderList.add(groupOrder);
-            }
-        }
+        groupOrderList = getGroupOrderListFromResultSet(resultSet);
         this.preparedStatement.close();
         return groupOrderList;
     }
 
     @Override
-    public GroupOrder findByUserId(int userId) throws Exception {
-        GroupOrder groupOrder = null;
+    public List<GroupOrder> findByUserId(int userId) throws Exception {
+        List<GroupOrder> groupOrderList = null;
         String sql = "select * from group_order where user_id = ?";
         ResultSet resultSet = null;
         this.preparedStatement = this.connection.prepareStatement(sql);
         this.preparedStatement.setInt(1, userId);
         resultSet = this.preparedStatement.executeQuery();
-        if (resultSet.next())
-            groupOrder = getGroupOrderFromResultSet(resultSet);
+        groupOrderList = getGroupOrderListFromResultSet(resultSet);
         this.preparedStatement.close();
-        return groupOrder;
+        return groupOrderList;
     }
 
     private GroupOrder getGroupOrderFromResultSet(ResultSet resultSet) throws Exception {
@@ -77,5 +68,20 @@ public class GroupOrderDAOImpl implements IGroupOrderDAO {
         groupOrder.setPrice(resultSet.getInt(4));
         groupOrder.setTime(resultSet.getDate(5));
         return groupOrder;
+    }
+
+    private List<GroupOrder> getGroupOrderListFromResultSet(ResultSet resultSet) throws Exception {
+        List<GroupOrder> groupOrderList = null;
+        GroupOrder groupOrder = null;
+        if (resultSet.next()) {
+            groupOrderList = new ArrayList<GroupOrder>();
+            groupOrder = getGroupOrderFromResultSet(resultSet);
+            groupOrderList.add(groupOrder);
+            while (resultSet.next()) {
+                groupOrder = getGroupOrderFromResultSet(resultSet);
+                groupOrderList.add(groupOrder);
+            }
+        }
+        return groupOrderList;
     }
 }

@@ -12,7 +12,6 @@
 <head>
     <title>精彩游记</title>
     <link rel="stylesheet" type="text/css" href="./css/travelNote.css" charset="UTF-8">
-    <script type="text/javascript">
     <%
       List<TravelNote> travelNoteList = (ArrayList<TravelNote>)session.getAttribute("travelNoteList");
       if (travelNoteList == null) {
@@ -21,7 +20,6 @@
     <%
       }
     %>
-  </script>
 </head>
 <body>
   <nav>

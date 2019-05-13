@@ -67,4 +67,17 @@ public class TravelNoteDAOProxy implements ITravelNoteDAO {
         }
         return id;
     }
+
+    @Override
+    public List<TravelNote> findByUserId(int userId) throws Exception {
+        List<TravelNote> travelNoteList = null;
+        try {
+            travelNoteList = this.travelNoteDAO.findByUserId(userId);
+        }catch (Exception e) {
+            throw e;
+        }finally {
+            this.dbUtil.closeConnection();
+        }
+        return travelNoteList;
+    }
 }

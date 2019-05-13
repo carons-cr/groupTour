@@ -53,7 +53,7 @@ public class SignUpServlet extends HttpServlet {
                 groupOrder.setTime(date);
                 DAOFactory.getIGroupOrderDAOInstance().doCreate(groupOrder);
             }
-            response.sendRedirect("/systemGroup.jsp");
+            response.sendRedirect("systemGroup");
         }catch (Exception e) {
             e.printStackTrace();
         }

@@ -35,8 +35,9 @@ public class CommentServlet extends HttpServlet {
                 Date date = new Date();
                 groupComment.setTime(date);
                 groupComment.setContent(content);
+                DAOFactory.getIGroupCommentDAOInstance().doCreate(groupComment);
             }
-            response.sendRedirect("/systemGroup.jsp");
+            response.sendRedirect("systemGroup");
         }catch (Exception e) {
             e.printStackTrace();
         }

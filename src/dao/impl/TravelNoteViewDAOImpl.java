@@ -46,7 +46,7 @@ public class TravelNoteViewDAOImpl implements ITravelNoteViewDAO {
     @Override
     public List<TravelNoteView> findByUserId(int userId) throws Exception {
         List<TravelNoteView> travelNoteViewList = null;
-        String sql = "SELECT * FROM travel_note_view WHERE user_id = ?";
+        String sql = "SELECT * FROM travel_note_view WHERE user_id = ? ORDER BY id DESC ";
         ResultSet resultSet = null;
         TravelNoteView travelNoteView = null;
         this.preparedStatement = this.connection.prepareStatement(sql);

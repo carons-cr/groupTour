@@ -8,18 +8,15 @@
   <component name="ChangeListManager">
     <list default="true" id="850e7fef-4c6f-4607-a165-a599054ce381" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/grouptour_war_exploded/js/nav.js" afterPath="$PROJECT_DIR$/out/artifacts/grouptour_war_exploded/js/nav.js" />
-      <change beforePath="$PROJECT_DIR$/src/dao/IGroupOrderDAO.java" afterPath="$PROJECT_DIR$/src/dao/IGroupOrderDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ITravelNoteDAO.java" afterPath="$PROJECT_DIR$/src/dao/ITravelNoteDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ITravelNoteViewDAO.java" afterPath="$PROJECT_DIR$/src/dao/ITravelNoteViewDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/dao/impl/GroupOrderDAOImpl.java" afterPath="$PROJECT_DIR$/src/dao/impl/GroupOrderDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/dao/impl/TravelNoteDAOImpl.java" afterPath="$PROJECT_DIR$/src/dao/impl/TravelNoteDAOImpl.java" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/grouptour_war_exploded/WEB-INF/classes/servlet/CommentServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/grouptour_war_exploded/WEB-INF/classes/servlet/CommentServlet.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/grouptour_war_exploded/WEB-INF/classes/servlet/SignUpServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/grouptour_war_exploded/WEB-INF/classes/servlet/SignUpServlet.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/grouptour_war_exploded/WEB-INF/classes/servlet/UserServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/grouptour_war_exploded/WEB-INF/classes/servlet/UserServlet.class" />
       <change beforePath="$PROJECT_DIR$/src/dao/impl/TravelNoteViewDAOImpl.java" afterPath="$PROJECT_DIR$/src/dao/impl/TravelNoteViewDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/dao/proxy/GroupOrderDAOProxy.java" afterPath="$PROJECT_DIR$/src/dao/proxy/GroupOrderDAOProxy.java" />
-      <change beforePath="$PROJECT_DIR$/src/dao/proxy/TravelNoteDAOProxy.java" afterPath="$PROJECT_DIR$/src/dao/proxy/TravelNoteDAOProxy.java" />
-      <change beforePath="$PROJECT_DIR$/src/dao/proxy/TravelNoteViewDAOProxy.java" afterPath="$PROJECT_DIR$/src/dao/proxy/TravelNoteViewDAOProxy.java" />
-      <change beforePath="$PROJECT_DIR$/web/js/nav.js" afterPath="$PROJECT_DIR$/web/js/nav.js" />
-      <change beforePath="$PROJECT_DIR$/web/travelNote.jsp" afterPath="$PROJECT_DIR$/web/travelNote.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/CommentServlet.java" afterPath="$PROJECT_DIR$/src/servlet/CommentServlet.java" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/SignUpServlet.java" afterPath="$PROJECT_DIR$/src/servlet/SignUpServlet.java" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/servlet/CommentServlet.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/servlet/CommentServlet.class" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/servlet/SignUpServlet.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/servlet/SignUpServlet.class" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/servlet/UserServlet.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/servlet/UserServlet.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,31 +51,25 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="grouptour: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="grouptour@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="grouptour: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="travel_note_view: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="grouptour@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="grouptour: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/user.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="16" column="97" lean-forward="true" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
-              <folding />
+      <file leaf-file-name="user" pinned="false" current-in-tab="false">
+        <entry file="das://table:/3885af36/dd8296d6-b751-4b32-810d-af925dd31439/grouptour.user">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="group_order" pinned="false" current-in-tab="true">
+        <entry file="das://table:/3885af36/dd8296d6-b751-4b32-810d-af925dd31439/grouptour.group_order">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -101,6 +92,9 @@
     <findStrings>
       <find>system</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,8 +129,6 @@
         <option value="$PROJECT_DIR$/web/js/groupDetail.js" />
         <option value="$PROJECT_DIR$/src/dao/impl/GroupCommentDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/servlet/OrderServlet.java" />
-        <option value="$PROJECT_DIR$/src/servlet/SignUpServlet.java" />
-        <option value="$PROJECT_DIR$/src/servlet/CommentServlet.java" />
         <option value="$PROJECT_DIR$/src/dao/impl/TravelNoteImgDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/dao/impl/SystemGroupDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/servlet/WriteNoteServlet.java" />
@@ -148,7 +140,6 @@
         <option value="$PROJECT_DIR$/web/groupDetail.jsp" />
         <option value="$PROJECT_DIR$/web/css/noteDetail.css" />
         <option value="$PROJECT_DIR$/web/js/travelNote.js" />
-        <option value="$PROJECT_DIR$/web/js/user.js" />
         <option value="$PROJECT_DIR$/web/css/travelNote.css" />
         <option value="$PROJECT_DIR$/web/js/nav.js" />
         <option value="$PROJECT_DIR$/src/dao/IGroupOrderDAO.java" />
@@ -156,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/dao/ITravelNoteDAO.java" />
         <option value="$PROJECT_DIR$/src/dao/proxy/TravelNoteDAOProxy.java" />
         <option value="$PROJECT_DIR$/src/dao/ITravelNoteViewDAO.java" />
-        <option value="$PROJECT_DIR$/src/dao/impl/TravelNoteViewDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/dao/proxy/TravelNoteViewDAOProxy.java" />
         <option value="$PROJECT_DIR$/web/css/user.css" />
         <option value="$PROJECT_DIR$/web/travelNote.jsp" />
@@ -164,6 +154,10 @@
         <option value="$PROJECT_DIR$/src/dao/impl/GroupOrderDAOImpl.java" />
         <option value="$PROJECT_DIR$/web/user.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/UserServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlet/SignUpServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlet/CommentServlet.java" />
+        <option value="$PROJECT_DIR$/web/js/user.js" />
+        <option value="$PROJECT_DIR$/src/dao/impl/TravelNoteViewDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -660,12 +654,12 @@
       <workItem from="1557501419041" duration="272000" />
       <workItem from="1557550364144" duration="25733000" />
       <workItem from="1557629972034" duration="29096000" />
-      <workItem from="1557726882687" duration="21896000" />
+      <workItem from="1557726882687" duration="25473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="602169000" />
+    <option name="totallyTimeSpent" value="605746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="81" y="17" width="1287" height="780" extended-state="6" />
@@ -679,12 +673,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.50272375" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2662968" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6338419" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25381416" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2381323" sideWeight="0.41774893" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2381323" sideWeight="0.5822511" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22568093" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -695,7 +690,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,32 +705,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dao/proxy/GroupCommentDAOProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/OrderServlet.java" />
-    <entry file="file://$PROJECT_DIR$/src/dao/IGroupCommentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/IUserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/GroupCommentDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-214">
-          <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -751,6 +723,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -769,25 +742,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/writeNote.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="53" column="65" lean-forward="false" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/3885af36/dd8296d6-b751-4b32-810d-af925dd31439/grouptour.system_group">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/groupDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,20 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/CommentServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/SignUpServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="49" column="51" lean-forward="true" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/NoteDetailServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -847,18 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/noteDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/noteDetail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -875,26 +807,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/travelNote.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/travelNote.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="119" column="25" lean-forward="false" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/GroupDetailServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -904,25 +820,6 @@
         <state relative-caret-position="72">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/SystemGroupServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/SystemGroupDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="56" column="46" lean-forward="false" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
-          <folding>
-            <marker date="1557653401695" expanded="true" signature="619:662" ph="select * fro... system_group" />
-            <marker date="1557653401695" expanded="true" signature="1468:1507" ph="select * fro... system_group" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -990,34 +887,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="80" lean-forward="false" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/groupDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="145" column="10" lean-forward="false" selection-start-line="145" selection-start-column="10" selection-end-line="145" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/groupDetail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="195" column="4" lean-forward="false" selection-start-line="195" selection-start-column="4" selection-end-line="195" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/systemGroup.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="50" column="65" lean-forward="false" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -1027,21 +900,6 @@
         <state relative-caret-position="252">
           <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/TravelNoteDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1314">
-          <caret line="83" column="65" lean-forward="false" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="65" />
-          <folding>
-            <marker date="1557750738660" expanded="true" signature="633:747" ph="insert into travel_note... " />
-            <marker date="1557750738660" expanded="true" signature="1472:1514" ph="select * fro... travel_note" />
-            <marker date="1557750738660" expanded="true" signature="1962:2000" ph="select * fro... travel_note" />
-            <marker date="1557750738660" expanded="true" signature="2489:2520" ph="select max(i... travel_note" />
-            <marker date="1557750738660" expanded="true" signature="2980:3006" ph="select * fro... travel_note" />
-            <marker date="1557750738660" expanded="true" signature="2980:3023" ph="select * fro... travel_note" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1061,18 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/TravelNoteViewDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="57" column="51" lean-forward="true" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
-          <folding>
-            <marker date="1557748267626" expanded="true" signature="639:707" ph="insert into travel_note_view... " />
-            <marker date="1557748267626" expanded="true" signature="1184:1246" ph="select count... travel_note_view" />
-            <marker date="1557748267626" expanded="true" signature="1774:1822" ph="SELECT * FRO... travel_note_view" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/impl/GroupOrderDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -1088,17 +934,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/3885af36/dd8296d6-b751-4b32-810d-af925dd31439/grouptour.user">
+    <entry file="file://$PROJECT_DIR$/src/servlet/UserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3885af36/dd8296d6-b751-4b32-810d-af925dd31439/grouptour.group_comment">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/3885af36/dd8296d6-b751-4b32-810d-af925dd31439/grouptour.group_order">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/web/noteDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-267">
+          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/GroupDetailServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/groupDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2610">
+          <caret line="145" column="10" lean-forward="false" selection-start-line="145" selection-start-column="10" selection-end-line="145" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/SystemGroupServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/systemGroup.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="50" column="65" lean-forward="false" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/CommentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/SignUpServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="55" column="46" lean-forward="false" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="80" lean-forward="false" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/groupDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="944">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/registerALogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/writeNote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="65" lean-forward="false" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/noteDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,19 +1053,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/UserServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/js/travelNote.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="281">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/user.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
+        <state relative-caret-position="288">
           <caret line="16" column="97" lean-forward="true" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/TravelNoteDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="83" column="65" lean-forward="false" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="65" />
+          <folding>
+            <marker date="1557750738660" expanded="true" signature="633:747" ph="insert into travel_note... " />
+            <marker date="1557750738660" expanded="true" signature="1472:1514" ph="select * fro... travel_note" />
+            <marker date="1557750738660" expanded="true" signature="1962:2000" ph="select * fro... travel_note" />
+            <marker date="1557750738660" expanded="true" signature="2489:2520" ph="select max(i... travel_note" />
+            <marker date="1557750738660" expanded="true" signature="2980:3006" ph="select * fro... travel_note" />
+            <marker date="1557750738660" expanded="true" signature="2980:3023" ph="select * fro... travel_note" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/GroupCommentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <marker date="1557638002591" expanded="true" signature="625:740" ph="insert into group_comment... " />
+            <marker date="1557638002591" expanded="true" signature="1503:1556" ph="select * fro... group_comment" />
+            <marker date="1557638002591" expanded="true" signature="2448:2493" ph="select * fro... group_comment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/TravelNoteViewDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="51" column="71" lean-forward="true" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
+          <folding>
+            <marker date="1557754353365" expanded="true" signature="639:707" ph="insert into travel_note_view... " />
+            <marker date="1557754353365" expanded="true" signature="1184:1246" ph="select count... travel_note_view" />
+            <marker date="1557754353365" expanded="true" signature="1774:1822" ph="SELECT * FRO... travel_note_view" />
+            <marker date="1557754353365" expanded="true" signature="1774:1839" ph="SELECT * FRO... travel_note_view" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/SystemGroupDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="56" column="46" lean-forward="false" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+          <folding>
+            <marker date="1557653401695" expanded="true" signature="619:662" ph="select * fro... system_group" />
+            <marker date="1557653401695" expanded="true" signature="1468:1507" ph="select * fro... system_group" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3885af36/dd8296d6-b751-4b32-810d-af925dd31439/grouptour.user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3885af36/dd8296d6-b751-4b32-810d-af925dd31439/grouptour.group_order">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

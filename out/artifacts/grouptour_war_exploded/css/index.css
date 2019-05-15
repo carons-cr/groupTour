@@ -75,6 +75,81 @@ iframe
         margin-left: -5080px;
     }
 }
+.content .recommend
+{
+    width: 96%;
+    margin-left: 2%;
+}
+.recommend .subTitle
+{
+    padding-top: 30px;
+    padding-bottom: 12px;
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #787d82;
+    border-bottom: 1px #d0d6d9 solid;
+}
+.recommend .group
+{
+    width: 84%;
+    height: 120px;
+    margin-left: 8%;
+    padding: 30px 0 30px 0;
+    border-bottom: 1px #eff1f0 solid;
+}
+.group .cover
+{
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-decoration: none;
+}
+.cover .image
+{
+    width: 100%;
+    height: 100%;
+}
+.group .title
+{
+    display: inline-block;
+    width: 75%;
+    height: 30%;
+    float: right;
+    color: #78a5f1;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.group .priceANumber
+{
+    width: 75%;
+    float: right;
+    padding: 6px 0 16px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #9199a1;
+}
+.priceANumber .price
+{
+    margin-right: 18px;
+}
+.group .time
+{
+    width: 75%;
+    float: right;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #9199a1;
+}
 footer
 {
     margin: 0;

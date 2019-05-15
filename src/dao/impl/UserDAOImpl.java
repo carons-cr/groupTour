@@ -6,6 +6,8 @@ import model.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDAOImpl implements IUserDAO{
     private Connection connection = null;
@@ -100,5 +102,26 @@ public class UserDAOImpl implements IUserDAO{
         user.setSex(resultSet.getString(8));
         user.setAddress(resultSet.getString(9));
         return user;
+    }
+
+    @Override
+    public List<User> findAll() throws Exception {
+        List<User> userList = null;
+        String sql = "select * from user";
+        ResultSet resultSet = null;
+        User user = null;
+        this.preparedStatement = connection.prepareStatement(sql);
+        resultSet = this.preparedStatement.executeQuery();
+        if (resultSet.next()) {
+            userList = new ArrayList<User>();
+            user = getUserFromResultSet(resultSet);
+            userList.add(user);
+            while (resultSet.next()) {
+                user = getUserFromResultSet(resultSet);
+                userList.add(user);
+            }
+        }
+        this.preparedStatement.close();
+        return userList;
     }
 }

@@ -5,6 +5,8 @@ import dao.impl.UserDAOImpl;
 import model.User;
 import util.DBUtil;
 
+import java.util.List;
+
 public class UserDAOProxy implements IUserDAO {
     private DBUtil dbUtil = null;
     private IUserDAO userDAO = null;
@@ -79,5 +81,18 @@ public class UserDAOProxy implements IUserDAO {
             this.dbUtil.closeConnection();
         }
         return user;
+    }
+
+    @Override
+    public List<User> findAll() throws Exception {
+        List<User> userList = null;
+        try {
+            userList = this.userDAO.findAll();
+        }catch (Exception e) {
+            throw e;
+        }finally {
+            this.dbUtil.closeConnection();
+        }
+        return userList;
     }
 }

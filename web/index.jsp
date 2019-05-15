@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="model.SystemGroup" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: caron
   Date: 19-3-23
@@ -41,6 +43,40 @@
         <li><img src="./img/rotationPlay4.jpg"/></li>
         <li><img src="./img/rotationPlay5.jpg"/></li>
       </ul>
+    </div>
+    <div class="recommend">
+      <%
+        List<SystemGroup> systemGroupList = (ArrayList<SystemGroup>)session.getAttribute("recommendGroupList");
+        if (systemGroupList == null) {
+      %>
+      <script type="text/javascript">
+        var userName = sessionStorage.getItem("userName");
+        if (userName != null) {
+            window.location.href = "recommend?userName=" + userName;
+        }
+      </script>
+      <%
+        }else {
+      %>
+      <p class="subTitle">为您推荐</p>
+      <%
+          for (SystemGroup systemGroup : systemGroupList) {
+      %>
+      <div class="group">
+        <a class="cover" href="groupDetail?id=<%=systemGroup.getId()%>">
+          <img class="image" src="<%=systemGroup.getImgUrl()%>"/>
+        </a>
+        <a class="title" href="groupDetail?id=<%=systemGroup.getId()%>"><%=systemGroup.getName()%></a>
+        <div class="priceANumber">
+          <span class="price">￥<%=systemGroup.getPrice()%></span>
+          <span class="number"><%=systemGroup.getNumber()%>人团</span>
+        </div>
+        <div class="time">出发时间 <%=systemGroup.getStartTime()%></div>
+      </div>
+      <%
+          }
+        }
+      %>
     </div>
   </div>
   <footer>

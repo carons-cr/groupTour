@@ -2,6 +2,7 @@ package dao.impl;
 
 import dao.IGroupOrderDAO;
 import model.GroupOrder;
+import model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -58,6 +59,25 @@ public class GroupOrderDAOImpl implements IGroupOrderDAO {
         groupOrderList = getGroupOrderListFromResultSet(resultSet);
         this.preparedStatement.close();
         return groupOrderList;
+    }
+
+    @Override
+    public List<Integer> findUserIdListByGroupId(int groupId) throws Exception {
+        List<Integer> userIdList = null;
+        String sql = "select user_id from group_order where system_group_id = ?";
+        ResultSet resultSet = null;
+        this.preparedStatement = this.connection.prepareStatement(sql);
+        this.preparedStatement.setInt(1, groupId);
+        resultSet = this.preparedStatement.executeQuery();
+        if (resultSet.next()) {
+            userIdList = new ArrayList<Integer>();
+            userIdList.add(resultSet.getInt(1));
+            while (resultSet.next()) {
+                userIdList.add(resultSet.getInt(1));
+            }
+        }
+        this.preparedStatement.close();
+        return userIdList;
     }
 
     private GroupOrder getGroupOrderFromResultSet(ResultSet resultSet) throws Exception {

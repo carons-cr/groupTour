@@ -1,7 +1,8 @@
 <%@ page import="model.SystemGroup" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="model.TravelNote" %><%--
+<%@ page import="model.TravelNote" %>
+<%@ page import="model.User" %><%--
   Created by IntelliJ IDEA.
   User: caron
   Date: 19-5-13
@@ -17,6 +18,7 @@
     List<SystemGroup> systemGroupList = (ArrayList<SystemGroup>)session.getAttribute("systemGroupList");
     List<TravelNote> travelNoteList = (ArrayList<TravelNote>)session.getAttribute("travelNoteList");
     List<TravelNote> viewNoteList = (ArrayList<TravelNote>)session.getAttribute("viewNoteList");
+    List<User> groupMemberList = (ArrayList<User>)session.getAttribute("groupMemberList");
   %>
 </head>
 <body>
@@ -41,6 +43,21 @@
           <span class="number"><%=systemGroup.getNumber()%>人团</span>
         </div>
         <div class="time">出发时间  <%=systemGroup.getStartTime()%></div>
+      <%
+                if (groupMemberList != null && groupMemberList.size() > 0) {
+      %>
+        <div class="users">拼团成员
+      <%
+                    for (User groupMember : groupMemberList) {
+      %>
+          <span class="user"><%=groupMember.getUserName()%></span>
+      <%
+                    }
+      %>
+        </div>
+      <%
+                }
+      %>
       </div>
       <%
             }

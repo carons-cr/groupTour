@@ -79,7 +79,7 @@ iframe {
 {
     width: 75%;
     float: right;
-    padding: 6px 0 16px;
+    padding-bottom: 8px;
     height: 25px;
     line-height: 25px;
     font-size: 14px;
@@ -93,10 +93,24 @@ iframe {
 {
     width: 75%;
     float: right;
+    padding-bottom: 8px;
     height: 25px;
     line-height: 25px;
     font-size: 14px;
     color: #9199a1;
+}
+.group .users
+{
+    width: 75%;
+    float: right;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #9199a1;
+}
+.users .user
+{
+    margin-left: 10px;
 }
 .noRecord
 {

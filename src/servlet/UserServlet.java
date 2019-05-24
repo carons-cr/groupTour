@@ -24,6 +24,8 @@ public class UserServlet extends HttpServlet {
         List<GroupOrder> groupOrderList = null;
         SystemGroup systemGroup = null;
         List<SystemGroup> systemGroupList = null;
+        List<Integer> userIdList = null;
+        List<User> groupMemberList = null;
         List<TravelNote> travelNoteList = null;
         List<TravelNoteView> travelNoteViewList = null;
         TravelNote viewNote = null;
@@ -38,6 +40,16 @@ public class UserServlet extends HttpServlet {
                     for (GroupOrder groupOrder : groupOrderList) {
                         systemGroup = DAOFactory.getISystemGroupDAOInstance().findById(groupOrder.getSystemGroupId());
                         systemGroupList.add(systemGroup);
+                        userIdList = DAOFactory.getIGroupOrderDAOInstance().findUserIdListByGroupId(groupOrder.getSystemGroupId());
+                        if (userIdList != null) {
+                            groupMemberList = new ArrayList<User>();
+                            for (Integer id : userIdList) {
+                                if (id == userId)
+                                    continue;
+                                User otherUser = DAOFactory.getIUserDAOInstance().findById(id);
+                                groupMemberList.add(otherUser);
+                            }
+                        }
                     }
                 }
                 travelNoteList = DAOFactory.getITravelNoteDAOInstance().findByUserId(userId);
@@ -53,6 +65,7 @@ public class UserServlet extends HttpServlet {
             session.setAttribute("systemGroupList", systemGroupList);
             session.setAttribute("travelNoteList", travelNoteList);
             session.setAttribute("viewNoteList", viewNoteList);
+            session.setAttribute("groupMemberList", groupMemberList);
             response.sendRedirect("/user.jsp");
         }catch (Exception e) {
             e.printStackTrace();

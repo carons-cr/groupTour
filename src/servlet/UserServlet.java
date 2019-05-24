@@ -68,6 +68,7 @@ public class UserServlet extends HttpServlet {
             session.setAttribute("groupMemberList", groupMemberList);
             response.sendRedirect("/user.jsp");
         }catch (Exception e) {
+            response.sendRedirect("/html/error.html");
             e.printStackTrace();
         }
     }

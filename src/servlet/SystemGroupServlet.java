@@ -25,6 +25,7 @@ public class SystemGroupServlet extends HttpServlet {
             session.setAttribute("systemGroupList", systemGroupList);
             response.sendRedirect("/systemGroup.jsp");
         }catch (Exception e) {
+            response.sendRedirect("/html/error.html");
             e.printStackTrace();
         }
     }

@@ -73,6 +73,7 @@ public class RecommendServlet extends HttpServlet {
             session.setAttribute("recommendGroupList", systemGroupList);
             response.sendRedirect("/index.jsp");
         }catch (Exception e) {
+            response.sendRedirect("/html/error.html");
             e.printStackTrace();
         }
     }

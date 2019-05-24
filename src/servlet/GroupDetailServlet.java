@@ -57,6 +57,7 @@ public class GroupDetailServlet extends HttpServlet {
             }
             response.sendRedirect(path);
         }catch (Exception e) {
+            response.sendRedirect("/html/error.html");
             e.printStackTrace();
         }
     }

@@ -50,6 +50,7 @@ public class NoteDetailServlet extends HttpServlet {
             session.setAttribute("travelNoteImgList", travelNoteImgList);
             response.sendRedirect("/noteDetail.jsp");
         }catch (Exception e) {
+            response.sendRedirect("/html/error.html");
             e.printStackTrace();
         }
     }

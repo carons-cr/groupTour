@@ -24,6 +24,7 @@ public class TravelNoteServlet extends HttpServlet {
             session.setAttribute("travelNoteList", travelNoteList);
             response.sendRedirect("/travelNote.jsp");
         }catch (Exception e) {
+            response.sendRedirect("/html/error.html");
             e.printStackTrace();
         }
     }

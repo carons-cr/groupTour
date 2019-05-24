@@ -39,6 +39,7 @@ public class CommentServlet extends HttpServlet {
             }
             response.sendRedirect("systemGroup");
         }catch (Exception e) {
+            response.sendRedirect("/html/error.html");
             e.printStackTrace();
         }
     }

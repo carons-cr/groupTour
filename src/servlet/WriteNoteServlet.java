@@ -47,6 +47,7 @@ public class WriteNoteServlet extends HttpServlet {
             }
             response.sendRedirect("travelNote");
         }catch (Exception e) {
+            response.sendRedirect("/html/error.html");
             e.printStackTrace();
         }
     }

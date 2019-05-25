@@ -18,7 +18,7 @@
     List<SystemGroup> systemGroupList = (ArrayList<SystemGroup>)session.getAttribute("systemGroupList");
     List<TravelNote> travelNoteList = (ArrayList<TravelNote>)session.getAttribute("travelNoteList");
     List<TravelNote> viewNoteList = (ArrayList<TravelNote>)session.getAttribute("viewNoteList");
-    List<User> groupMemberList = (ArrayList<User>)session.getAttribute("groupMemberList");
+    List<List<User>> groupMemberLists = (ArrayList<List<User>>)session.getAttribute("groupMemberLists");
   %>
 </head>
 <body>
@@ -30,8 +30,8 @@
       <p class="subTitle">我的拼团游</p>
       <%
         if (systemGroupList != null) {
+            int index = 0;
             for (SystemGroup systemGroup : systemGroupList) {
-
       %>
       <div class="group">
         <a class="cover" href="groupDetail?id=<%=systemGroup.getId()%>">
@@ -44,17 +44,29 @@
         </div>
         <div class="time">出发时间  <%=systemGroup.getStartTime()%></div>
       <%
-                if (groupMemberList != null && groupMemberList.size() > 0) {
+                if (groupMemberLists != null) {
+                    List<User> groupMemberList = groupMemberLists.get(index++);
+                    if (groupMemberList != null && groupMemberList.size() > 0) {
       %>
         <div class="users">拼团成员
       <%
-                    for (User groupMember : groupMemberList) {
+                        for (User groupMember : groupMemberList) {
       %>
           <span class="user"><%=groupMember.getUserName()%></span>
       <%
-                    }
+                        }
       %>
         </div>
+      <%
+                    }else {
+      %>
+        <div class="users">暂无其他拼团成员~</div>
+      <%
+                    }
+
+                }else {
+      %>
+        <div class="users">暂无其他拼团成员~</div>
       <%
                 }
       %>

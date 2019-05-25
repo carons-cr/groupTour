@@ -25,6 +25,7 @@ public class UserServlet extends HttpServlet {
         SystemGroup systemGroup = null;
         List<SystemGroup> systemGroupList = null;
         List<Integer> userIdList = null;
+        List<List<User>> groupMemberLists = null;
         List<User> groupMemberList = null;
         List<TravelNote> travelNoteList = null;
         List<TravelNoteView> travelNoteViewList = null;
@@ -37,18 +38,22 @@ public class UserServlet extends HttpServlet {
                 groupOrderList = DAOFactory.getIGroupOrderDAOInstance().findByUserId(userId);
                 if (groupOrderList != null) {
                     systemGroupList =  new ArrayList<SystemGroup>();
+                    groupMemberLists = new ArrayList<List<User>>();
                     for (GroupOrder groupOrder : groupOrderList) {
                         systemGroup = DAOFactory.getISystemGroupDAOInstance().findById(groupOrder.getSystemGroupId());
-                        systemGroupList.add(systemGroup);
+                        if (systemGroup != null)
+                            systemGroupList.add(systemGroup);
                         userIdList = DAOFactory.getIGroupOrderDAOInstance().findUserIdListByGroupId(groupOrder.getSystemGroupId());
                         if (userIdList != null) {
                             groupMemberList = new ArrayList<User>();
                             for (Integer id : userIdList) {
                                 if (id == userId)
                                     continue;
-                                User otherUser = DAOFactory.getIUserDAOInstance().findById(id);
-                                groupMemberList.add(otherUser);
+                                User groupMember = DAOFactory.getIUserDAOInstance().findById(id);
+                                if (groupMember != null)
+                                    groupMemberList.add(groupMember);
                             }
+                            groupMemberLists.add(groupMemberList);
                         }
                     }
                 }
@@ -58,14 +63,15 @@ public class UserServlet extends HttpServlet {
                     viewNoteList = new ArrayList<TravelNote>();
                     for (TravelNoteView travelNoteView : travelNoteViewList) {
                         viewNote = DAOFactory.getITravelNoteDAOInstance().findById(travelNoteView.getTravelNoteId());
-                        viewNoteList.add(viewNote);
+                        if (viewNote != null)
+                            viewNoteList.add(viewNote);
                     }
                 }
             }
             session.setAttribute("systemGroupList", systemGroupList);
             session.setAttribute("travelNoteList", travelNoteList);
             session.setAttribute("viewNoteList", viewNoteList);
-            session.setAttribute("groupMemberList", groupMemberList);
+            session.setAttribute("groupMemberLists", groupMemberLists);
             response.sendRedirect("/user.jsp");
         }catch (Exception e) {
             response.sendRedirect("/html/error.html");

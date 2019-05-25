@@ -15,6 +15,11 @@ import java.util.logging.SimpleFormatter;
 
 public class Test {
     public static void main(String[] args) {
+        /*测试for each语句遍历空集合
+        List<String> strs = new ArrayList<String>();
+        for (String str : strs) {
+            System.out.println(str);
+        }*/
         /*测试系统拼团数据库操作
         List<SystemGroup> systemGroupList = new ArrayList<SystemGroup>();
         SystemGroup systemGroup = null;

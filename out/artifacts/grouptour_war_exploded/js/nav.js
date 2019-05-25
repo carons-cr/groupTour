@@ -11,6 +11,10 @@ window.onload=function () {
         document.getElementById("registerOrUserName").innerHTML=userName;
         document.getElementById("registerOrUserName").href="user?name="+userName;
         document.getElementById("loginOrExit").innerHTML="| 退出";
-        document.getElementById("loginOrExit").href=currentUrl;
+        if (currentUrl.match("user.jsp") != null) {
+            document.getElementById("loginOrExit").href = "/index.jsp";
+        }else {
+            document.getElementById("loginOrExit").href = currentUrl;
+        }
     }
 };

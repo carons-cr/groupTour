@@ -43,6 +43,7 @@
             session.removeAttribute("userName");
             session.removeAttribute("reRegisterUserName");
             session.removeAttribute("loginFailUserName");
+            session.removeAttribute("recommendGroupList");
         %>
             sessionStorage.removeItem("userName");
             sessionStorage.removeItem("reRegisterUserName");

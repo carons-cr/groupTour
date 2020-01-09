@@ -11,5 +11,10 @@
       <user-name>root</user-name>
       <introspection-schemas>*:grouptour</introspection-schemas>
     </data-source>
+    <data-source name="@localhost" uuid="40e688f4-481e-48c8-9691-99a8d509cfa8">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>grouptour</user-name>
+    </data-source>
   </component>
 </project>
